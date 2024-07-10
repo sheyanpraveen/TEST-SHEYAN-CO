@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" xmlns:app="urn:schemas-codeontime-com:data-aquarium-application">
+  <siteMapNode url="~/Default.aspx" title="Home" description="">
+    <siteMapNode title="Home" description="Application home page" url="~/Home.aspx" />
+    <siteMapNode title="Settings" description="Manage Settings" url="~/appSettings/Details.aspx" />
+    <siteMapNode title="Configurations" description="Manage Configurations" url="~/appHierarchyLevels/List.aspx">
+      <siteMapNode title="Data Field" description="Manage Data Field Configuration" url="~/UI/AppFieldAutoPopulation.aspx" />
+      <siteMapNode title="Data Import Template" description="Manage DataImport Template Configuration" url="~/UI/AppDataImportTemplate.aspx" />
+      <siteMapNode title="Data Point" description="Manage Data Point Configuration" url="~/UI/DataPointConfiguration.aspx" />
+      <siteMapNode title="Active Query Builder" description="Manage Active Query Builder Configuration" url="~/UI/ActiveQueryBuilderConfiguration.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Main Menu" description="Manage Main Menu" url="~/UI/ManageMainMenu.aspx" />
+    <siteMapNode title="Pages" description="Manage Pages" url="~/UI/ManagePages.aspx" />
+    <siteMapNode title="Security" description="Security" url="~/UI/Security.aspx" >
+      <siteMapNode title="Privileges" description="Manage Privileges" url="~/secPrivileges/List.aspx" />
+      <siteMapNode title="Roles" description="Manage Roles" url="~/Roles/List.aspx" />
+      <siteMapNode title="Teams" description="Manage Teams" url="~/Teams/List.aspx" />
+      <siteMapNode title="Users" description="Manage Users" url="~/UI/Users.aspx" />
+    </siteMapNode>
+    <siteMapNode title="API Manager" description="API Manager" url="~/UI/ApiManager.aspx" />
+    <siteMapNode title="API Chain" description="API Chain" url="~/UI/ApiChainManager.aspx" />
+    <!--<siteMapNode title="Json Path Finder" description="Json Path Finder" url="~/UI/JsonPathFinder.aspx" />-->
+    <siteMapNode title="Folder Version Config" description="Document Version Configuration" url="~/UI/FolderVersioningConfiguration.aspx" >
+      <siteMapNode title="Document Config" description="Document Configuration" url="~/UI/DocumentConfiguration.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Inbound API Manager" description="Inbound API Manager" url="~/UI/InboundApiManager.aspx" />
+    <siteMapNode title="Manifest Configuration" description="Manifest Configuration" url="~/UI/ManifestConfiguration.aspx" >
+      <siteMapNode title="Manifest File Configuration" description="Manifest File Configuration" url="~/UI/ManifestFileConfiguration.aspx" />
+    </siteMapNode>
+    <siteMapNode title="ExternalLink Configuration" description="ExternalLink Configuration" url="~/UI/ExternalLinkConfigurationForm.aspx" >
+    </siteMapNode>
+    <siteMapNode title="Logoff" description="Log off" url="~/Account/Logoff.aspx" />
+  </siteMapNode>
+</siteMap>

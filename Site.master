@@ -1,0 +1,33 @@
+﻿<%@ Master Language="C#" CodeBehind="Site.master.cs" Inherits="RRD.GRESAdmin.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Convergence Application Administration</title>
+    <link href="App_Themes/GRESAdmin/Styles.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        html, body, form
+        {
+            height: 100%;           
+            padding: 0px;
+            margin: 0px;
+            background-color:#ffffff;         
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+  <%--  <div class="page fullpage">--%>
+        <div class="col1">
+            <!-- Column 1 start -->
+            <div id="page-header">
+                <asp:ContentPlaceHolder ID="PageHeaderContentPlaceHolder" runat="server" />
+            </div>
+            <asp:ContentPlaceHolder ID="PageContentPlaceHolder" runat="server" />
+        </div>
+   <%-- </div>--%>
+    </form>
+</body>
+</html>

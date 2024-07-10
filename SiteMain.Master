@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMain.master.cs" Inherits="RRD.GRESAdmin.SiteMain" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="App_Themes/GRESAdmin/Styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    
+</head>
+<body class="main-body">
+    <form id="form1" runat="server">
+    <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+    </telerik:RadScriptManager>
+    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+    <div id="wrap">
+        <div id="header">
+            <div class="header-logo"> </div>
+            <div class="header-title" style="">
+                <span class="title-static" style="">Convergence Application Administration</span> 
+                <asp:Label ID="ApplicationName" runat="server" CssClass="title-appname"/>
+            </div>
+        </div>
+        <div id="header-menu">
+            <%--    <div id="menu">--%>
+            <telerik:RadMenu ID="RadMenu1" runat="server" DataSourceID="SiteMapDataSource1" TargetControlID="PageMenuBar"
+                EnableShadows="true" EnableRoundedCorners="true" Skin="WebBlue" Width="100%" />
+            <%-- </div>--%>
+        </div>
+        <div class="page fullpage">
+            <div class="DDNavigation">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                </asp:SiteMapPath>
+            </div>
+            <div class="col1">
+                <!-- Column 1 start -->
+                <div class="page-header">
+                    <asp:ContentPlaceHolder ID="PageHeaderContentPlaceHolder" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <asp:ContentPlaceHolder ID="PageContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- Column 1 end -->
+            </div>
+        </div>
+    </div>
+    <div id="footer-menu">
+        <telerik:RadMenu ID="RadMenu2" runat="server" DataSourceID="SiteMapDataSource1" TargetControlID="PageMenuBar"
+            EnableShadows="true" EnableRoundedCorners="true" Skin="" />
+    </div>
+    <div id="footer">
+        <p>
+            Copyright © 2004 - 2011 R. R. Donnelley & Sons Company. All rights reserved.</p>
+    </div>
+    <!-- end #footer -->
+    </form>
+</body>
+</html>

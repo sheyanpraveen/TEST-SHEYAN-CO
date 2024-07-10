@@ -1,0 +1,3024 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FFAADE8-A751-4B01-A166-87B944FCAF73}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RRD.GRESAdmin</RootNamespace>
+    <AssemblyName>RRD.GRESAdmin</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>44366</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress>
+    </Use64BitIISExpress>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <NoWarn>CS0108;CS0168;CS0219</NoWarn>
+    <LangVersion>default</LangVersion>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.Core, Version=3.5.6.1113, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ProjectDLLs\ActiveQueryBuilder.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.EventMetadataProvider, Version=3.5.6.1113, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ProjectDLLs\ActiveQueryBuilder.EventMetadataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.MSSQLMetadataProvider, Version=3.5.6.1113, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ProjectDLLs\ActiveQueryBuilder.MSSQLMetadataProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.View, Version=3.5.6.1112, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ProjectDLLs\ActiveQueryBuilder.View.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.Web.Server, Version=3.3.5.0, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ProjectDLLs\ActiveQueryBuilder.Web.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiveQueryBuilder.Web.WebForms, Version=3.3.5.0, Culture=neutral, PublicKeyToken=3cbcbcc9bf57ecde, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>ProjectDLLs\ActiveQueryBuilder.Web.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.Common, Version=5.2.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.Common.5.2.0\lib\net461\GleamTech.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.DocumentUltimate, Version=6.2.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.DocumentUltimate.6.2.1\lib\net461\GleamTech.DocumentUltimate.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.FileUltimate, Version=8.2.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.FileUltimate.8.2.1\lib\net461\GleamTech.FileUltimate.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.ImageUltimate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.ImageUltimate.5.3.0\lib\net461\GleamTech.ImageUltimate.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.VideoUltimate, Version=3.3.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.VideoUltimate.3.3.0\lib\net461\GleamTech.VideoUltimate.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>ProjectDLLs\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.4.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.4.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Administration, Version=7.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.0.1\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Registry.4.5.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.CodeDom.4.5.0\lib\net461\System.CodeDom.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Console, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.0.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.5.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.TraceSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.TraceSource.4.3.0\lib\net46\System.Diagnostics.TraceSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Claims, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Claims.4.0.1\lib\net46\System.Security.Claims.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.1.1\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.DynamicData.Design" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2018.3.910.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2018.3.910.45\Telerik.Web.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.Spreadsheet">
+      <HintPath>lib\RCAJAX\2018.3.910.45\AdditionalLibraries\Bin45\Telerik.Web.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2018.3.910.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2018.3.910.45\Telerik.Web.UI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI.Skins, Version=2018.3.910.45, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\RCAJAX\2018.3.910.45\Telerik.Web.UI.Skins.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Core">
+      <HintPath>lib\RCAJAX\2018.3.910.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Flow">
+      <HintPath>lib\RCAJAX\2018.3.910.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Flow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet">
+      <HintPath>lib\RCAJAX\2018.3.910.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml">
+      <HintPath>lib\RCAJAX\2018.3.910.45\AdditionalLibraries\Bin45\Telerik.Windows.Documents.Spreadsheet.FormatProviders.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Telerik.Windows.Zip">
+      <HintPath>lib\RCAJAX\2018.3.910.45\AdditionalLibraries\Bin45\Telerik.Windows.Zip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessDenied.aspx.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AccessDenied.aspx.designer.cs">
+      <DependentUpon>AccessDenied.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Logoff.aspx.cs">
+      <DependentUpon>Logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Logoff.aspx.designer.cs">
+      <DependentUpon>Logoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Code\CheckboxTemplate.cs" />
+    <Compile Include="App_Code\ColorPickerTemplate.cs" />
+    <Compile Include="App_Code\DynamicAppFieldRequestModel.cs" />
+    <Compile Include="AssignInspector.aspx.cs">
+      <DependentUpon>AssignInspector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignInspector.aspx.designer.cs">
+      <DependentUpon>AssignInspector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseGridControl.Master.cs">
+      <DependentUpon>BaseGridControl.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseGridControl.Master.designer.cs">
+      <DependentUpon>BaseGridControl.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BaseWidgetControl.Master.cs">
+      <DependentUpon>BaseWidgetControl.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BaseWidgetControl.Master.designer.cs">
+      <DependentUpon>BaseWidgetControl.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Helpers\SanitizeHelper.cs" />
+    <Compile Include="Common\Impersonator.cs" />
+    <Compile Include="DynamicData\CustomPages\appControls\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appControls\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appForms\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appForms\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appGroupItems\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appGroupItems\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appGroupItems\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appGroupItems\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appGroupItems\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appGroupItems\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appMainMenus\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appMainMenus\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appMainMenus\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appMainMenus\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appSections\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appSections\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appSettings\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appSettings\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\SkinPicker_Edit.ascx.cs">
+      <DependentUpon>SkinPicker_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\SkinPicker_Edit.ascx.designer.cs">
+      <DependentUpon>SkinPicker_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Textarea_Edit.ascx.cs">
+      <DependentUpon>Textarea_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Textarea_Edit.ascx.designer.cs">
+      <DependentUpon>Textarea_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\GridBuilderHelper.cs" />
+    <Compile Include="Helpers\StandaloneTileBuilderHelper.cs" />
+    <Compile Include="Model\InboundApiModel.cs" />
+    <Compile Include="Model\InboundApiValidationError.cs" />
+    <Compile Include="Controls\FilteringTemplateColumns.cs" />
+    <Compile Include="DynamicData\CustomPages\appPages\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appPages\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appPages\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appPages\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\HTMLEditorTelerik.ascx.cs">
+      <DependentUpon>HTMLEditorTelerik.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\HTMLEditorTelerik.ascx.designer.cs">
+      <DependentUpon>HTMLEditorTelerik.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\HTMLEditorTelerik_Edit.ascx.cs">
+      <DependentUpon>HTMLEditorTelerik_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\HTMLEditorTelerik_Edit.ascx.designer.cs">
+      <DependentUpon>HTMLEditorTelerik_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\SQLCommand.ascx.cs">
+      <DependentUpon>SQLCommand.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\SQLCommand.ascx.designer.cs">
+      <DependentUpon>SQLCommand.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\SQLCommand_Edit.ascx.cs">
+      <DependentUpon>SQLCommand_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\SQLCommand_Edit.ascx.designer.cs">
+      <DependentUpon>SQLCommand_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\ListDetails.aspx.designer.cs">
+      <DependentUpon>ListDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AreaChartBuilderHelper.cs" />
+    <Compile Include="Helpers\BubbleChartBuilderHelper.cs" />
+    <Compile Include="Helpers\ColumnChartBuilderHelper.cs" />
+    <Compile Include="Helpers\CopyFormBuilderHelper.cs" />
+    <Compile Include="Helpers\DashboardBuilderHelper.cs" />
+    <Compile Include="Helpers\BarChartBuilderHelper.cs" />
+    <Compile Include="Helpers\DonutChartBuilderHelper.cs" />
+    <Compile Include="Helpers\LineChartBuilderHelper.cs" />
+    <Compile Include="Helpers\PieChartBuilderHelper.cs" />
+    <Compile Include="Helpers\ScatterChartBuilderHelper.cs" />
+    <Compile Include="Helpers\ScatterLineChartBuilderHelper.cs" />
+    <Compile Include="Helpers\StepLineChartBuilderHelper.cs" />
+    <Compile Include="Model\IdentityModel.cs" />
+    <Compile Include="Model\Managers\SignInManager.cs" />
+    <Compile Include="Model\Managers\UserManager.cs" />
+    <Compile Include="Model\Service\SignInService.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\UserClaim.cs" />
+    <Compile Include="Model\UserLogin.cs" />
+    <Compile Include="Model\UserRole.cs" />
+    <Compile Include="Model\UserStore.cs" />
+    <Compile Include="More.aspx.cs">
+      <DependentUpon>More.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="More.aspx.designer.cs">
+      <DependentUpon>More.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageForm.Master.cs">
+      <DependentUpon>PageForm.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PageForm.Master.designer.cs">
+      <DependentUpon>PageForm.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Redirect.aspx.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Redirect.aspx.designer.cs">
+      <DependentUpon>Redirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteLogin.Master.cs">
+      <DependentUpon>SiteLogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteLogin.Master.designer.cs">
+      <DependentUpon>SiteLogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="UI\ActiveQueryBuilderConfiguration.aspx.cs">
+      <DependentUpon>ActiveQueryBuilderConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ActiveQueryBuilderConfiguration.aspx.designer.cs">
+      <DependentUpon>ActiveQueryBuilderConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseWidgetControl.aspx.cs">
+      <DependentUpon>BaseWidgetControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseWidgetControl.aspx.designer.cs">
+      <DependentUpon>BaseWidgetControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ButtonSettings.aspx.cs">
+      <DependentUpon>ButtonSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ButtonSettings.aspx.designer.cs">
+      <DependentUpon>ButtonSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ExternalLinkConfigurationForm.aspx.cs">
+      <DependentUpon>ExternalLinkConfigurationForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ExternalLinkConfigurationForm.aspx.designer.cs">
+      <DependentUpon>ExternalLinkConfigurationForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManifestFileConfiguration.aspx.cs">
+      <DependentUpon>ManifestFileConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ManifestFileConfiguration.aspx.designer.cs">
+      <DependentUpon>ManifestFileConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiAddEndpoint.aspx.cs">
+      <DependentUpon>ApiAddEndpoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiAddEndpoint.aspx.designer.cs">
+      <DependentUpon>ApiAddEndpoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiChainExecuter.aspx.cs">
+      <DependentUpon>ApiChainExecuter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiChainExecuter.aspx.designer.cs">
+      <DependentUpon>ApiChainExecuter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiChainExecuteResult.aspx.cs">
+      <DependentUpon>ApiChainExecuteResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiChainExecuteResult.aspx.designer.cs">
+      <DependentUpon>ApiChainExecuteResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiMethodConfiguration.aspx.cs">
+      <DependentUpon>ApiMethodConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiMethodConfiguration.aspx.designer.cs">
+      <DependentUpon>ApiMethodConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiChain.aspx.cs">
+      <DependentUpon>ApiChain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiChain.aspx.designer.cs">
+      <DependentUpon>ApiChain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiChainManager.aspx.cs">
+      <DependentUpon>ApiChainManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiChainManager.aspx.designer.cs">
+      <DependentUpon>ApiChainManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiChainReturnTemplateConfiguration.aspx.cs">
+      <DependentUpon>ApiChainReturnTemplateConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiChainReturnTemplateConfiguration.aspx.designer.cs">
+      <DependentUpon>ApiChainReturnTemplateConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AppDataImportTemplate.aspx.cs">
+      <DependentUpon>AppDataImportTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AppDataImportTemplate.aspx.designer.cs">
+      <DependentUpon>AppDataImportTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiDeleteEndpoint.aspx.cs">
+      <DependentUpon>ApiDeleteEndpoint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiDeleteEndpoint.aspx.designer.cs">
+      <DependentUpon>ApiDeleteEndpoint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiEndpointDetail.aspx.cs">
+      <DependentUpon>ApiEndpointDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiEndpointDetail.aspx.designer.cs">
+      <DependentUpon>ApiEndpointDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiManager.aspx.cs">
+      <DependentUpon>ApiManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiManager.aspx.designer.cs">
+      <DependentUpon>ApiManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiExecuter.aspx.cs">
+      <DependentUpon>ApiExecuter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiExecuter.aspx.designer.cs">
+      <DependentUpon>ApiExecuter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ApiMethodDetail.aspx.cs">
+      <DependentUpon>ApiMethodDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ApiMethodDetail.aspx.designer.cs">
+      <DependentUpon>ApiMethodDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AppFieldAutoPopulation.aspx.cs">
+      <DependentUpon>AppFieldAutoPopulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AppFieldAutoPopulation.aspx.designer.cs">
+      <DependentUpon>AppFieldAutoPopulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\AssignPrivileges.aspx.cs">
+      <DependentUpon>AssignPrivileges.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AssignPrivileges.aspx.designer.cs">
+      <DependentUpon>AssignPrivileges.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\AreaChartTemplate.aspx.cs">
+      <DependentUpon>AreaChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\AreaChartTemplate.aspx.designer.cs">
+      <DependentUpon>AreaChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\GridTemplate.aspx.cs">
+      <DependentUpon>GridTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\GridTemplate.aspx.designer.cs">
+      <DependentUpon>GridTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\StandAloneTileTemplate.aspx.cs">
+      <DependentUpon>StandAloneTileTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\StandAloneTileTemplate.aspx.designer.cs">
+      <DependentUpon>StandAloneTileTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\StepLineChartTemplate.aspx.cs">
+      <DependentUpon>StepLineChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\StepLineChartTemplate.aspx.designer.cs">
+      <DependentUpon>StepLineChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\BarChartTemplate.aspx.cs">
+      <DependentUpon>BarChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\BarChartTemplate.aspx.designer.cs">
+      <DependentUpon>BarChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\BubbleChartTemplate.aspx.cs">
+      <DependentUpon>BubbleChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\BubbleChartTemplate.aspx.designer.cs">
+      <DependentUpon>BubbleChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\ColumnChartTemplate.aspx.cs">
+      <DependentUpon>ColumnChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\ColumnChartTemplate.aspx.designer.cs">
+      <DependentUpon>ColumnChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\DonutChartTemplate.aspx.cs">
+      <DependentUpon>DonutChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\DonutChartTemplate.aspx.designer.cs">
+      <DependentUpon>DonutChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\LineChartTemplate.aspx.cs">
+      <DependentUpon>LineChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\LineChartTemplate.aspx.designer.cs">
+      <DependentUpon>LineChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\MapTemplate.aspx.cs">
+      <DependentUpon>MapTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\MapTemplate.aspx.designer.cs">
+      <DependentUpon>MapTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\PieChartTemplate.aspx.cs">
+      <DependentUpon>PieChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\PieChartTemplate.aspx.designer.cs">
+      <DependentUpon>PieChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\ScatterChartTemplate.aspx.cs">
+      <DependentUpon>ScatterChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\ScatterChartTemplate.aspx.designer.cs">
+      <DependentUpon>ScatterChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\ScatterLineChartTemplate.aspx.cs">
+      <DependentUpon>ScatterLineChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\ScatterLineChartTemplate.aspx.designer.cs">
+      <DependentUpon>ScatterLineChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BITemplates\TestModal.aspx.cs">
+      <DependentUpon>TestModal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BITemplates\TestModal.aspx.designer.cs">
+      <DependentUpon>TestModal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ControlSelector.aspx.cs">
+      <DependentUpon>ControlSelector.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ControlSelector.aspx.designer.cs">
+      <DependentUpon>ControlSelector.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomQueryBuilder.aspx.cs">
+      <DependentUpon>CustomQueryBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\CustomQueryBuilder.aspx.designer.cs">
+      <DependentUpon>CustomQueryBuilder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DashboardBuilder.aspx.cs">
+      <DependentUpon>DashboardBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DashboardBuilder.aspx.designer.cs">
+      <DependentUpon>DashboardBuilder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DataPointConfiguration.aspx.cs">
+      <DependentUpon>DataPointConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DataPointConfiguration.aspx.designer.cs">
+      <DependentUpon>DataPointConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DocumentBuilder.aspx.cs">
+      <DependentUpon>DocumentBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentBuilder.aspx.designer.cs">
+      <DependentUpon>DocumentBuilder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\DocumentConfiguration.aspx.cs">
+      <DependentUpon>DocumentConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\DocumentConfiguration.aspx.designer.cs">
+      <DependentUpon>DocumentConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FieldAutoPopulation.aspx.cs">
+      <DependentUpon>FieldAutoPopulation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FieldAutoPopulation.aspx.designer.cs">
+      <DependentUpon>FieldAutoPopulation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FolderVersioningConfiguration.aspx.cs">
+      <DependentUpon>FolderVersioningConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FolderVersioningConfiguration.aspx.designer.cs">
+      <DependentUpon>FolderVersioningConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormBuilder.aspx.cs">
+      <DependentUpon>FormBuilder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FormBuilder.aspx.designer.cs">
+      <DependentUpon>FormBuilder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormBuilderOverview.aspx.cs">
+      <DependentUpon>FormBuilderOverview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\FormBuilderOverview.aspx.designer.cs">
+      <DependentUpon>FormBuilderOverview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\GroupSelection.aspx.cs">
+      <DependentUpon>GroupSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\GroupSelection.aspx.designer.cs">
+      <DependentUpon>GroupSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InboundApiConfiguration.aspx.cs">
+      <DependentUpon>InboundApiConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\InboundApiConfiguration.aspx.designer.cs">
+      <DependentUpon>InboundApiConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\InboundApiManager.aspx.cs">
+      <DependentUpon>InboundApiManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\InboundApiManager.aspx.designer.cs">
+      <DependentUpon>InboundApiManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\JsonPathFinder.aspx.cs">
+      <DependentUpon>JsonPathFinder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\JsonPathFinder.aspx.designer.cs">
+      <DependentUpon>JsonPathFinder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManageMainMenu.aspx.cs">
+      <DependentUpon>ManageMainMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ManageMainMenu.aspx.designer.cs">
+      <DependentUpon>ManageMainMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ManifestConfiguration.aspx.cs">
+      <DependentUpon>ManifestConfiguration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ManifestConfiguration.aspx.designer.cs">
+      <DependentUpon>ManifestConfiguration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MaskControls.aspx.cs">
+      <DependentUpon>MaskControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MaskControls.aspx.designer.cs">
+      <DependentUpon>MaskControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MaskGroupPopUp.aspx.cs">
+      <DependentUpon>MaskGroupPopUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\MaskGroupPopUp.aspx.designer.cs">
+      <DependentUpon>MaskGroupPopUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Security.aspx.cs">
+      <DependentUpon>Security.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Security.aspx.designer.cs">
+      <DependentUpon>Security.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SQLGenerator.aspx.cs">
+      <DependentUpon>SQLGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SQLGenerator.aspx.designer.cs">
+      <DependentUpon>SQLGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\ChartTemplate.aspx.cs">
+      <DependentUpon>ChartTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\ChartTemplate.aspx.designer.cs">
+      <DependentUpon>ChartTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\DynamicAppFieldPage.aspx.cs">
+      <DependentUpon>DynamicAppFieldPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\DynamicAppFieldPage.aspx.designer.cs">
+      <DependentUpon>DynamicAppFieldPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\ButtonTemplate.aspx.cs">
+      <DependentUpon>ButtonTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\ButtonTemplate.aspx.designer.cs">
+      <DependentUpon>ButtonTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\CheckboxTemplate.aspx.cs">
+      <DependentUpon>CheckboxTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\CheckboxTemplate.aspx.designer.cs">
+      <DependentUpon>CheckboxTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\DatepickerTemplate.aspx.cs">
+      <DependentUpon>DatepickerTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\DatepickerTemplate.aspx.designer.cs">
+      <DependentUpon>DatepickerTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\DropdownElementTemplate.aspx.cs">
+      <DependentUpon>DropdownElementTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\DropdownElementTemplate.aspx.designer.cs">
+      <DependentUpon>DropdownElementTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\DropzoneTemplate.aspx.cs">
+      <DependentUpon>DropzoneTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\DropzoneTemplate.aspx.designer.cs">
+      <DependentUpon>DropzoneTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\EmailTextBoxTemplate.aspx.cs">
+      <DependentUpon>EmailTextBoxTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\EmailTextBoxTemplate.aspx.designer.cs">
+      <DependentUpon>EmailTextBoxTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\ExternalLinkTemplate.aspx.cs">
+      <DependentUpon>ExternalLinkTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\ExternalLinkTemplate.aspx.designer.cs">
+      <DependentUpon>ExternalLinkTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\LabelTemplate.aspx.cs">
+      <DependentUpon>LabelTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\LabelTemplate.aspx.designer.cs">
+      <DependentUpon>LabelTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\NumericTextBoxTemplate.aspx.cs">
+      <DependentUpon>NumericTextBoxTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\NumericTextBoxTemplate.aspx.designer.cs">
+      <DependentUpon>NumericTextBoxTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\RadioButtonTemplate.aspx.cs">
+      <DependentUpon>RadioButtonTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\RadioButtonTemplate.aspx.designer.cs">
+      <DependentUpon>RadioButtonTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\SubFormAreaTemplate.aspx.cs">
+      <DependentUpon>SubFormAreaTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\SubFormAreaTemplate.aspx.designer.cs">
+      <DependentUpon>SubFormAreaTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\TextAreaTemplate.aspx.cs">
+      <DependentUpon>TextAreaTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\TextAreaTemplate.aspx.designer.cs">
+      <DependentUpon>TextAreaTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\TextBoxTemplate.aspx.cs">
+      <DependentUpon>TextBoxTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Templates\FormBuilderTemplates\TextBoxTemplate.aspx.designer.cs">
+      <DependentUpon>TextBoxTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TreeSearchResult.aspx.cs">
+      <DependentUpon>TreeSearchResult.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\TreeSearchResult.aspx.designer.cs">
+      <DependentUpon>TreeSearchResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DataPointConfiguration.ascx.cs">
+      <DependentUpon>DataPointConfiguration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\DataPointConfiguration.ascx.designer.cs">
+      <DependentUpon>DataPointConfiguration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UserForm.ascx.cs">
+      <DependentUpon>UserForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserForm.ascx.designer.cs">
+      <DependentUpon>UserForm.ascx</DependentUpon>
+    </Compile>
+    <Content Include="AccessDenied.aspx" />
+    <Content Include="Account\images\11csi.jpg" />
+    <Content Include="Account\images\12cpm.jpg" />
+    <Content Include="Account\images\13cdm.jpg" />
+    <Content Include="Account\images\15cam.jpg" />
+    <Content Include="Account\images\16resource.jpg" />
+    <Content Include="Account\images\17rsadminplus20.jpg" />
+    <Content Include="Account\images\18rsadminsurv.jpg" />
+    <Content Include="Account\images\19rsadmin2020.jpg" />
+    <Content Include="Account\images\20rdss.jpg" />
+    <Content Include="Account\images\addrec.gif" />
+    <Content Include="Account\images\ajax-loader_blue1.gif" />
+    <Content Include="Account\images\album.gif" />
+    <Content Include="Account\images\arrow_forward.gif" />
+    <Content Include="Account\images\Aspose.Banner.gif" />
+    <Content Include="Account\images\Aspose.Cells.gif" />
+    <Content Include="Account\images\banner\CCM\banner.png" />
+    <Content Include="Account\images\banner\CCM\bannerFill.png" />
+    <Content Include="Account\images\banner\CPM\banner.png" />
+    <Content Include="Account\images\banner\CPM\bannerFill.png" />
+    <Content Include="Account\images\banner\Default\banner.png" />
+    <Content Include="Account\images\banner\Default\bannerFill.png" />
+    <Content Include="Account\images\banner\Default\Product.png" />
+    <Content Include="Account\images\banner\FHLB\banner.png" />
+    <Content Include="Account\images\banner\FHLB\bannerFill.png" />
+    <Content Include="Account\images\banner\FreddieMac\banner.png" />
+    <Content Include="Account\images\banner\FreddieMac\bannerFill.png" />
+    <Content Include="Account\images\bi\icons8-area-chart-16.png" />
+    <Content Include="Account\images\bi\icons8-area-chart-48.png" />
+    <Content Include="Account\images\bi\icons8-bar-chart-16.png" />
+    <Content Include="Account\images\bi\icons8-bar-chart-48.png" />
+    <Content Include="Account\images\bi\icons8-doughnut-chart-16.png" />
+    <Content Include="Account\images\bi\icons8-doughnut-chart-48.png" />
+    <Content Include="Account\images\bi\icons8-line-chart-16.png" />
+    <Content Include="Account\images\bi\icons8-line-chart-48.png" />
+    <Content Include="Account\images\bi\icons8-pie-chart-16.png" />
+    <Content Include="Account\images\bi\icons8-pie-chart-48.png" />
+    <Content Include="Account\images\bi\icons8-scatter-plot-16.png" />
+    <Content Include="Account\images\bi\icons8-scatter-plot-48.png" />
+    <Content Include="Account\images\bluegrad.jpg" />
+    <Content Include="Account\images\BodyBG.gif" />
+    <Content Include="Account\images\branding\BWTS\BairdWarner\banner.png" />
+    <Content Include="Account\images\branding\BWTS\BairdWarner\bannerFill.png" />
+    <Content Include="Account\images\branding\BWTS\BairdWarner\companylogo.png" />
+    <Content Include="Account\images\branding\BWTS\BairdWarner\loginBackground.jpg" />
+    <Content Include="Account\images\branding\CSI\Covius\banner.png" />
+    <Content Include="Account\images\branding\CSI\Covius\bannerFill.png" />
+    <Content Include="Account\images\branding\CSI\Covius\companylogo.png" />
+    <Content Include="Account\images\branding\CSI\Covius\loginbackground.jpg" />
+    <Content Include="Account\images\branding\eMAQCS\FHLB\banner.png" />
+    <Content Include="Account\images\branding\eMAQCS\FHLB\bannerFill.png" />
+    <Content Include="Account\images\branding\eMAQCS\FHLB\companylogo.png" />
+    <Content Include="Account\images\branding\eMAQCS\FHLB\loginbackground.jpg" />
+    <Content Include="Account\images\branding\MES\FreddieMac\banner.png" />
+    <Content Include="Account\images\branding\MES\FreddieMac\bannerFill.png" />
+    <Content Include="Account\images\branding\MES\FreddieMac\companylogo.png" />
+    <Content Include="Account\images\branding\Project Portal\Covius\banner.png" />
+    <Content Include="Account\images\branding\Project Portal\Covius\bannerFill.png" />
+    <Content Include="Account\images\branding\Project Portal\Covius\companyLogo.png" />
+    <Content Include="Account\images\branding\Project Portal\Covius\loginbackground.jpg" />
+    <Content Include="Account\images\branding\Project Portal\Whirlpool\banner.png" />
+    <Content Include="Account\images\branding\Project Portal\Whirlpool\bannerFill.png" />
+    <Content Include="Account\images\branding\Project Portal\Whirlpool\companyLogo.png" />
+    <Content Include="Account\images\branding\Project Portal\Whirlpool\loginbackground.jpg" />
+    <Content Include="Account\images\branding\reQuest\ClearTitle\banner.png" />
+    <Content Include="Account\images\branding\reQuest\ClearTitle\bannerFill.png" />
+    <Content Include="Account\images\branding\reQuest\ClearTitle\companylogo.png" />
+    <Content Include="Account\images\branding\reQuest\ClearTitle\companylogo_small.png" />
+    <Content Include="Account\images\branding\reQuest\ClearTitle\loginbackground.jpg" />
+    <Content Include="Account\images\branding\reQuest\reQuire\banner.png" />
+    <Content Include="Account\images\branding\reQuest\reQuire\bannerFill.png" />
+    <Content Include="Account\images\branding\reQuest\reQuire\companylogo.png" />
+    <Content Include="Account\images\branding\reQuest\reQuire\Coviuslogo196.png" />
+    <Content Include="Account\images\branding\reQuest\reQuire\loginbackground.jpg" />
+    <Content Include="Account\images\button1.bmp" />
+    <Content Include="Account\images\button2.bmp" />
+    <Content Include="Account\images\button_run.gif" />
+    <Content Include="Account\images\c.gif" />
+    <Content Include="Account\images\cmdds.PNG" />
+    <Content Include="Account\images\convergence\Convergence.png" />
+    <Content Include="Account\images\Coviuslogo160.png" />
+    <Content Include="Account\images\Coviuslogo196.png" />
+    <Content Include="Account\images\Coviuslogo200.png" />
+    <Content Include="Account\images\delrec.gif" />
+    <Content Include="Account\images\designer1.JPG" />
+    <Content Include="Account\images\designer2.JPG" />
+    <Content Include="Account\images\documentasync\blue1doc.png" />
+    <Content Include="Account\images\documentasync\blueplusdoc.png" />
+    <Content Include="Account\images\documentasync\combined2_bg.png" />
+    <Content Include="Account\images\documentasync\goldplus.png" />
+    <Content Include="Account\images\documentasync\green1.png" />
+    <Content Include="Account\images\documentasync\green2.png" />
+    <Content Include="Account\images\documentasync\green3.png" />
+    <Content Include="Account\images\documentasync\green4.png" />
+    <Content Include="Account\images\documentasync\green5.png" />
+    <Content Include="Account\images\documentasync\greenplus.png" />
+    <Content Include="Account\images\error.jpg" />
+    <Content Include="Account\images\error.png" />
+    <Content Include="Account\images\error1.jpg" />
+    <Content Include="Account\images\forms\fmac\fmac.png" />
+    <Content Include="Account\images\freddielogo.png" />
+    <Content Include="Account\images\greencheck.png" />
+    <Content Include="Account\images\guizhou_closeall.gif" />
+    <Content Include="Account\images\guizhou_openall.gif" />
+    <Content Include="Account\images\header-bg.gif" />
+    <Content Include="Account\images\icons\16x16\accept.png" />
+    <Content Include="Account\images\icons\16x16\add.png" />
+    <Content Include="Account\images\icons\16x16\application.png" />
+    <Content Include="Account\images\icons\16x16\application_accept.png" />
+    <Content Include="Account\images\icons\16x16\application_add.png" />
+    <Content Include="Account\images\icons\16x16\application_delete.png" />
+    <Content Include="Account\images\icons\16x16\application_down.png" />
+    <Content Include="Account\images\icons\16x16\application_edit.png" />
+    <Content Include="Account\images\icons\16x16\application_info.png" />
+    <Content Include="Account\images\icons\16x16\application_next.png" />
+    <Content Include="Account\images\icons\16x16\application_remove.png" />
+    <Content Include="Account\images\icons\16x16\application_search.png" />
+    <Content Include="Account\images\icons\16x16\application_up.png" />
+    <Content Include="Account\images\icons\16x16\blue_button.png" />
+    <Content Include="Account\images\icons\16x16\business_user.png" />
+    <Content Include="Account\images\icons\16x16\business_user_accept.png" />
+    <Content Include="Account\images\icons\16x16\business_user_add.png" />
+    <Content Include="Account\images\icons\16x16\business_user_back.png" />
+    <Content Include="Account\images\icons\16x16\business_user_comment.png" />
+    <Content Include="Account\images\icons\16x16\business_user_delete.png" />
+    <Content Include="Account\images\icons\16x16\business_user_edit.png" />
+    <Content Include="Account\images\icons\16x16\business_user_info.png" />
+    <Content Include="Account\images\icons\16x16\business_user_search.png" />
+    <Content Include="Account\images\icons\16x16\calendar.png" />
+    <Content Include="Account\images\icons\16x16\calendar_date.png" />
+    <Content Include="Account\images\icons\16x16\cd.png" />
+    <Content Include="Account\images\icons\16x16\cd_accept.png" />
+    <Content Include="Account\images\icons\16x16\cd_add.png" />
+    <Content Include="Account\images\icons\16x16\cd_delete.png" />
+    <Content Include="Account\images\icons\16x16\cd_info.png" />
+    <Content Include="Account\images\icons\16x16\cd_rw.png" />
+    <Content Include="Account\images\icons\16x16\cd_warning.png" />
+    <Content Include="Account\images\icons\16x16\chart.png" />
+    <Content Include="Account\images\icons\16x16\chart_accept.png" />
+    <Content Include="Account\images\icons\16x16\chart_add.png" />
+    <Content Include="Account\images\icons\16x16\chart_delete.png" />
+    <Content Include="Account\images\icons\16x16\chart_info.png" />
+    <Content Include="Account\images\icons\16x16\comment.png" />
+    <Content Include="Account\images\icons\16x16\comments.png" />
+    <Content Include="Account\images\icons\16x16\comment_accept.png" />
+    <Content Include="Account\images\icons\16x16\comment_add.png" />
+    <Content Include="Account\images\icons\16x16\comment_delete.png" />
+    <Content Include="Account\images\icons\16x16\comment_edit.png" />
+    <Content Include="Account\images\icons\16x16\computer.png" />
+    <Content Include="Account\images\icons\16x16\computers.png" />
+    <Content Include="Account\images\icons\16x16\computer_accept.png" />
+    <Content Include="Account\images\icons\16x16\computer_black.png" />
+    <Content Include="Account\images\icons\16x16\computer_delete.png" />
+    <Content Include="Account\images\icons\16x16\computer_network.png" />
+    <Content Include="Account\images\icons\16x16\computer_process.png" />
+    <Content Include="Account\images\icons\16x16\computer_search.png" />
+    <Content Include="Account\images\icons\16x16\database.png" />
+    <Content Include="Account\images\icons\16x16\database_accept.png" />
+    <Content Include="Account\images\icons\16x16\database_add.png" />
+    <Content Include="Account\images\icons\16x16\database_delete.png" />
+    <Content Include="Account\images\icons\16x16\database_down.png" />
+    <Content Include="Account\images\icons\16x16\database_help.png" />
+    <Content Include="Account\images\icons\16x16\database_info.png" />
+    <Content Include="Account\images\icons\16x16\database_lock.png" />
+    <Content Include="Account\images\icons\16x16\database_next.png" />
+    <Content Include="Account\images\icons\16x16\database_previous.png" />
+    <Content Include="Account\images\icons\16x16\database_process.png" />
+    <Content Include="Account\images\icons\16x16\database_remove.png" />
+    <Content Include="Account\images\icons\16x16\database_search.png" />
+    <Content Include="Account\images\icons\16x16\database_up.png" />
+    <Content Include="Account\images\icons\16x16\database_warning.png" />
+    <Content Include="Account\images\icons\16x16\delete.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_accept.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_add.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_delete.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_down.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_info.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_next.png" />
+    <Content Include="Account\images\icons\16x16\digital_camcorder_search.png" />
+    <Content Include="Account\images\icons\16x16\disabled.png" />
+    <Content Include="Account\images\icons\16x16\down.png" />
+    <Content Include="Account\images\icons\16x16\dvd.png" />
+    <Content Include="Account\images\icons\16x16\eject.png" />
+    <Content Include="Account\images\icons\16x16\Excel.png" />
+    <Content Include="Account\images\icons\16x16\exclamation_button.png" />
+    <Content Include="Account\images\icons\16x16\fast_forward.png" />
+    <Content Include="Account\images\icons\16x16\favorite.png" />
+    <Content Include="Account\images\icons\16x16\favorite_add.png" />
+    <Content Include="Account\images\icons\16x16\favorite_remove.png" />
+    <Content Include="Account\images\icons\16x16\FileUploader_icon.png" />
+    <Content Include="Account\images\icons\16x16\filter.png" />
+    <Content Include="Account\images\icons\16x16\folder.png" />
+    <Content Include="Account\images\icons\16x16\folder_accept.png" />
+    <Content Include="Account\images\icons\16x16\folder_add.png" />
+    <Content Include="Account\images\icons\16x16\folder_delete.png" />
+    <Content Include="Account\images\icons\16x16\folder_down.png" />
+    <Content Include="Account\images\icons\16x16\folder_edit.png" />
+    <Content Include="Account\images\icons\16x16\folder_empty.png" />
+    <Content Include="Account\images\icons\16x16\folder_help.png" />
+    <Content Include="Account\images\icons\16x16\folder_info.png" />
+    <Content Include="Account\images\icons\16x16\folder_lock.png" />
+    <Content Include="Account\images\icons\16x16\folder_next.png" />
+    <Content Include="Account\images\icons\16x16\folder_previous.png" />
+    <Content Include="Account\images\icons\16x16\folder_process.png" />
+    <Content Include="Account\images\icons\16x16\folder_remove.png" />
+    <Content Include="Account\images\icons\16x16\folder_search.png" />
+    <Content Include="Account\images\icons\16x16\folder_up.png" />
+    <Content Include="Account\images\icons\16x16\folder_warning.png" />
+    <Content Include="Account\images\icons\16x16\globe.png" />
+    <Content Include="Account\images\icons\16x16\globe_accept.png" />
+    <Content Include="Account\images\icons\16x16\globe_add.png" />
+    <Content Include="Account\images\icons\16x16\globe_down.png" />
+    <Content Include="Account\images\icons\16x16\globe_info.png" />
+    <Content Include="Account\images\icons\16x16\globe_process.png" />
+    <Content Include="Account\images\icons\16x16\globe_remove.png" />
+    <Content Include="Account\images\icons\16x16\globe_search.png" />
+    <Content Include="Account\images\icons\16x16\globe_up.png" />
+    <Content Include="Account\images\icons\16x16\globe_warning.png" />
+    <Content Include="Account\images\icons\16x16\green_button.png" />
+    <Content Include="Account\images\icons\16x16\headphones.png" />
+    <Content Include="Account\images\icons\16x16\headphones_accept.png" />
+    <Content Include="Account\images\icons\16x16\headphones_add.png" />
+    <Content Include="Account\images\icons\16x16\headphones_delete.png" />
+    <Content Include="Account\images\icons\16x16\help.png" />
+    <Content Include="Account\images\icons\16x16\help_add.png" />
+    <Content Include="Account\images\icons\16x16\home.png" />
+    <Content Include="Account\images\icons\16x16\home_accept.png" />
+    <Content Include="Account\images\icons\16x16\home_info.png" />
+    <Content Include="Account\images\icons\16x16\home_remove.png" />
+    <Content Include="Account\images\icons\16x16\home_search.png" />
+    <Content Include="Account\images\icons\16x16\home_warning.png" />
+    <Content Include="Account\images\icons\16x16\image.png" />
+    <Content Include="Account\images\icons\16x16\images.png" />
+    <Content Include="Account\images\icons\16x16\image_accept.png" />
+    <Content Include="Account\images\icons\16x16\image_add.png" />
+    <Content Include="Account\images\icons\16x16\image_bmp.png" />
+    <Content Include="Account\images\icons\16x16\image_delete.png" />
+    <Content Include="Account\images\icons\16x16\image_down.png" />
+    <Content Include="Account\images\icons\16x16\image_edit.png" />
+    <Content Include="Account\images\icons\16x16\image_info.png" />
+    <Content Include="Account\images\icons\16x16\image_jpg.png" />
+    <Content Include="Account\images\icons\16x16\image_next.png" />
+    <Content Include="Account\images\icons\16x16\image_previous.png" />
+    <Content Include="Account\images\icons\16x16\image_remove.png" />
+    <Content Include="Account\images\icons\16x16\image_search.png" />
+    <Content Include="Account\images\icons\16x16\image_tif.png" />
+    <Content Include="Account\images\icons\16x16\image_up.png" />
+    <Content Include="Account\images\icons\16x16\info.png" />
+    <Content Include="Account\images\icons\16x16\ipod.png" />
+    <Content Include="Account\images\icons\16x16\ipod_accept.png" />
+    <Content Include="Account\images\icons\16x16\ipod_add.png" />
+    <Content Include="Account\images\icons\16x16\ipod_delete.png" />
+    <Content Include="Account\images\icons\16x16\ipod_down.png" />
+    <Content Include="Account\images\icons\16x16\ipod_info.png" />
+    <Content Include="Account\images\icons\16x16\ipod_next.png" />
+    <Content Include="Account\images\icons\16x16\ipod_search.png" />
+    <Content Include="Account\images\icons\16x16\lock.png" />
+    <Content Include="Account\images\icons\16x16\mail.png" />
+    <Content Include="Account\images\icons\16x16\mail_accept.png" />
+    <Content Include="Account\images\icons\16x16\mail_add.png" />
+    <Content Include="Account\images\icons\16x16\mail_delete.png" />
+    <Content Include="Account\images\icons\16x16\mail_down.png" />
+    <Content Include="Account\images\icons\16x16\mail_edit.png" />
+    <Content Include="Account\images\icons\16x16\mail_info.png" />
+    <Content Include="Account\images\icons\16x16\mail_next.png" />
+    <Content Include="Account\images\icons\16x16\mail_previous.png" />
+    <Content Include="Account\images\icons\16x16\mail_remove.png" />
+    <Content Include="Account\images\icons\16x16\mail_search.png" />
+    <Content Include="Account\images\icons\16x16\mail_up.png" />
+    <Content Include="Account\images\icons\16x16\mail_warning.png" />
+    <Content Include="Account\images\icons\16x16\menu-icon.png" />
+    <Content Include="Account\images\icons\16x16\menu_control2.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_accept.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_add.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_delete.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_down.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_info.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_next.png" />
+    <Content Include="Account\images\icons\16x16\mobile_phone_search.png" />
+    <Content Include="Account\images\icons\16x16\new_mail.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_accept.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_add.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_delete.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_down.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_edit.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_next.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_previous.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_remove.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_search.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_up.png" />
+    <Content Include="Account\images\icons\16x16\new_mail_warning.png" />
+    <Content Include="Account\images\icons\16x16\next.png" />
+    <Content Include="Account\images\icons\16x16\notebook.png" />
+    <Content Include="Account\images\icons\16x16\notebook_accept.png" />
+    <Content Include="Account\images\icons\16x16\notebook_add.png" />
+    <Content Include="Account\images\icons\16x16\notebook_delete.png" />
+    <Content Include="Account\images\icons\16x16\notebook_edit.png" />
+    <Content Include="Account\images\icons\16x16\notebook_lock.png" />
+    <Content Include="Account\images\icons\16x16\notebook_search.png" />
+    <Content Include="Account\images\icons\16x16\page.png" />
+    <Content Include="Account\images\icons\16x16\pages_add.png" />
+    <Content Include="Account\images\icons\16x16\pages_blank_add.png" />
+    <Content Include="Account\images\icons\16x16\pages_blank_warning.png" />
+    <Content Include="Account\images\icons\16x16\pages_warning.png" />
+    <Content Include="Account\images\icons\16x16\page_accept.png" />
+    <Content Include="Account\images\icons\16x16\page_add.png" />
+    <Content Include="Account\images\icons\16x16\page_blank.png" />
+    <Content Include="Account\images\icons\16x16\page_delete.png" />
+    <Content Include="Account\images\icons\16x16\page_down.png" />
+    <Content Include="Account\images\icons\16x16\page_edit.png" />
+    <Content Include="Account\images\icons\16x16\page_help.png" />
+    <Content Include="Account\images\icons\16x16\page_info.png" />
+    <Content Include="Account\images\icons\16x16\page_lock.png" />
+    <Content Include="Account\images\icons\16x16\page_next.png" />
+    <Content Include="Account\images\icons\16x16\page_previous.png" />
+    <Content Include="Account\images\icons\16x16\page_process.png" />
+    <Content Include="Account\images\icons\16x16\page_remove.png" />
+    <Content Include="Account\images\icons\16x16\page_search.png" />
+    <Content Include="Account\images\icons\16x16\page_up.png" />
+    <Content Include="Account\images\icons\16x16\page_warning.png" />
+    <Content Include="Account\images\icons\16x16\pdf-icon.png" />
+    <Content Include="Account\images\icons\16x16\pdf_icon.png" />
+    <Content Include="Account\images\icons\16x16\play.png" />
+    <Content Include="Account\images\icons\16x16\previous.png" />
+    <Content Include="Account\images\icons\16x16\printer.png" />
+    <Content Include="Account\images\icons\16x16\printer_accept.png" />
+    <Content Include="Account\images\icons\16x16\printer_info.png" />
+    <Content Include="Account\images\icons\16x16\printer_remove.png" />
+    <Content Include="Account\images\icons\16x16\printer_search.png" />
+    <Content Include="Account\images\icons\16x16\printer_warning.png" />
+    <Content Include="Account\images\icons\16x16\process.png" />
+    <Content Include="Account\images\icons\16x16\process_accept.png" />
+    <Content Include="Account\images\icons\16x16\process_add.png" />
+    <Content Include="Account\images\icons\16x16\process_delete.png" />
+    <Content Include="Account\images\icons\16x16\process_down.png" />
+    <Content Include="Account\images\icons\16x16\process_help.png" />
+    <Content Include="Account\images\icons\16x16\process_info.png" />
+    <Content Include="Account\images\icons\16x16\process_lock.png" />
+    <Content Include="Account\images\icons\16x16\process_next.png" />
+    <Content Include="Account\images\icons\16x16\process_remove.png" />
+    <Content Include="Account\images\icons\16x16\process_warning.png" />
+    <Content Include="Account\images\icons\16x16\record.png" />
+    <Content Include="Account\images\icons\16x16\red_button.png" />
+    <Content Include="Account\images\icons\16x16\remove.png" />
+    <Content Include="Account\images\icons\16x16\repeat.png" />
+    <Content Include="Account\images\icons\16x16\rewind.png" />
+    <Content Include="Account\images\icons\16x16\rss.png" />
+    <Content Include="Account\images\icons\16x16\rss_accept.png" />
+    <Content Include="Account\images\icons\16x16\rss_add.png" />
+    <Content Include="Account\images\icons\16x16\rss_delete.png" />
+    <Content Include="Account\images\icons\16x16\rss_down.png" />
+    <Content Include="Account\images\icons\16x16\rss_info.png" />
+    <Content Include="Account\images\icons\16x16\rss_next.png" />
+    <Content Include="Account\images\icons\16x16\rss_previous.png" />
+    <Content Include="Account\images\icons\16x16\rss_up.png" />
+    <Content Include="Account\images\icons\16x16\save.png" />
+    <Content Include="Account\images\icons\16x16\scanner.png" />
+    <Content Include="Account\images\icons\16x16\scanner_accept.png" />
+    <Content Include="Account\images\icons\16x16\scanner_add.png" />
+    <Content Include="Account\images\icons\16x16\scanner_delete.png" />
+    <Content Include="Account\images\icons\16x16\scanner_down.png" />
+    <Content Include="Account\images\icons\16x16\scanner_next.png" />
+    <Content Include="Account\images\icons\16x16\search.png" />
+    <Content Include="Account\images\icons\16x16\search_add.png" />
+    <Content Include="Account\images\icons\16x16\search_remove.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_accept.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_add.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_delete.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_down.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_next.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_previous.png" />
+    <Content Include="Account\images\icons\16x16\shopping_cart_up.png" />
+    <Content Include="Account\images\icons\16x16\skip_backward.png" />
+    <Content Include="Account\images\icons\16x16\skip_forward.png" />
+    <Content Include="Account\images\icons\16x16\speaker.png" />
+    <Content Include="Account\images\icons\16x16\speaker_accept.png" />
+    <Content Include="Account\images\icons\16x16\speaker_delete.png" />
+    <Content Include="Account\images\icons\16x16\speaker_remove.png" />
+    <Content Include="Account\images\icons\16x16\stop.png" />
+    <Content Include="Account\images\icons\16x16\unlock.png" />
+    <Content Include="Account\images\icons\16x16\up.png" />
+    <Content Include="Account\images\icons\16x16\usb_stick.png" />
+    <Content Include="Account\images\icons\16x16\usb_stick_accept.png" />
+    <Content Include="Account\images\icons\16x16\usb_stick_add.png" />
+    <Content Include="Account\images\icons\16x16\usb_stick_delete.png" />
+    <Content Include="Account\images\icons\16x16\usb_stick_down.png" />
+    <Content Include="Account\images\icons\16x16\usb_stick_next.png" />
+    <Content Include="Account\images\icons\16x16\user.png" />
+    <Content Include="Account\images\icons\16x16\users.png" />
+    <Content Include="Account\images\icons\16x16\users_accept.png" />
+    <Content Include="Account\images\icons\16x16\users_add.png" />
+    <Content Include="Account\images\icons\16x16\users_comments.png" />
+    <Content Include="Account\images\icons\16x16\users_delete.png" />
+    <Content Include="Account\images\icons\16x16\users_edit.png" />
+    <Content Include="Account\images\icons\16x16\user_accept.png" />
+    <Content Include="Account\images\icons\16x16\user_add.png" />
+    <Content Include="Account\images\icons\16x16\user_comment.png" />
+    <Content Include="Account\images\icons\16x16\user_delete.png" />
+    <Content Include="Account\images\icons\16x16\user_edit.png" />
+    <Content Include="Account\images\icons\16x16\user_info.png" />
+    <Content Include="Account\images\icons\16x16\user_search.png" />
+    <Content Include="Account\images\icons\16x16\warning.png" />
+    <Content Include="Account\images\icons\16x16\window.png" />
+    <Content Include="Account\images\icons\16x16\window_accept.png" />
+    <Content Include="Account\images\icons\16x16\window_add.png" />
+    <Content Include="Account\images\icons\16x16\window_delete.png" />
+    <Content Include="Account\images\icons\16x16\window_down.png" />
+    <Content Include="Account\images\icons\16x16\window_edit.png" />
+    <Content Include="Account\images\icons\16x16\window_info.png" />
+    <Content Include="Account\images\icons\16x16\window_next.png" />
+    <Content Include="Account\images\icons\16x16\window_remove.png" />
+    <Content Include="Account\images\icons\16x16\window_search.png" />
+    <Content Include="Account\images\icons\16x16\window_up.png" />
+    <Content Include="Account\images\icons\16x16\xls_icon.png" />
+    <Content Include="Account\images\icons\16x16\yellow_button.png" />
+    <Content Include="Account\images\icons\16x16_mono\arrow-circle-top-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\bar-chart-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\cloud-upload-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\cog-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\copywriting-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\document-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\home-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\key-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\lock-locked-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\loop-square-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\magnifying-glass-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\person-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\shield-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono\wrench-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\arrow-circle-top-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\bar-chart-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\cloud-upload-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\cog-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\copywriting-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\document-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\home-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\key-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\lock-locked-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\loop-square-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\magnifying-glass-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\person-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\shield-2x.png" />
+    <Content Include="Account\images\icons\16x16_mono_white\wrench-2x.png" />
+    <Content Include="Account\images\icons\24x24\accept.png" />
+    <Content Include="Account\images\icons\24x24\add.png" />
+    <Content Include="Account\images\icons\24x24\application.png" />
+    <Content Include="Account\images\icons\24x24\application_accept.png" />
+    <Content Include="Account\images\icons\24x24\application_add.png" />
+    <Content Include="Account\images\icons\24x24\application_delete.png" />
+    <Content Include="Account\images\icons\24x24\application_down.png" />
+    <Content Include="Account\images\icons\24x24\application_edit.png" />
+    <Content Include="Account\images\icons\24x24\application_info.png" />
+    <Content Include="Account\images\icons\24x24\application_next.png" />
+    <Content Include="Account\images\icons\24x24\application_remove.png" />
+    <Content Include="Account\images\icons\24x24\application_search.png" />
+    <Content Include="Account\images\icons\24x24\application_up.png" />
+    <Content Include="Account\images\icons\24x24\blue_button.png" />
+    <Content Include="Account\images\icons\24x24\business_user.png" />
+    <Content Include="Account\images\icons\24x24\business_user_accept.png" />
+    <Content Include="Account\images\icons\24x24\business_user_add.png" />
+    <Content Include="Account\images\icons\24x24\business_user_back.png" />
+    <Content Include="Account\images\icons\24x24\business_user_comment.png" />
+    <Content Include="Account\images\icons\24x24\business_user_delete.png" />
+    <Content Include="Account\images\icons\24x24\business_user_edit.png" />
+    <Content Include="Account\images\icons\24x24\business_user_info.png" />
+    <Content Include="Account\images\icons\24x24\business_user_search.png" />
+    <Content Include="Account\images\icons\24x24\calendar.png" />
+    <Content Include="Account\images\icons\24x24\calendar_date.png" />
+    <Content Include="Account\images\icons\24x24\cd.png" />
+    <Content Include="Account\images\icons\24x24\cd_accept.png" />
+    <Content Include="Account\images\icons\24x24\cd_add.png" />
+    <Content Include="Account\images\icons\24x24\cd_delete.png" />
+    <Content Include="Account\images\icons\24x24\cd_info.png" />
+    <Content Include="Account\images\icons\24x24\cd_rw.png" />
+    <Content Include="Account\images\icons\24x24\cd_warning.png" />
+    <Content Include="Account\images\icons\24x24\chart.png" />
+    <Content Include="Account\images\icons\24x24\chart_accept.png" />
+    <Content Include="Account\images\icons\24x24\chart_add.png" />
+    <Content Include="Account\images\icons\24x24\chart_delete.png" />
+    <Content Include="Account\images\icons\24x24\chart_info.png" />
+    <Content Include="Account\images\icons\24x24\comment.png" />
+    <Content Include="Account\images\icons\24x24\comments.png" />
+    <Content Include="Account\images\icons\24x24\comment_accept.png" />
+    <Content Include="Account\images\icons\24x24\comment_add.png" />
+    <Content Include="Account\images\icons\24x24\comment_delete.png" />
+    <Content Include="Account\images\icons\24x24\comment_edit.png" />
+    <Content Include="Account\images\icons\24x24\computer.png" />
+    <Content Include="Account\images\icons\24x24\computers.png" />
+    <Content Include="Account\images\icons\24x24\computer_accept.png" />
+    <Content Include="Account\images\icons\24x24\computer_black.png" />
+    <Content Include="Account\images\icons\24x24\computer_delete.png" />
+    <Content Include="Account\images\icons\24x24\computer_network.png" />
+    <Content Include="Account\images\icons\24x24\computer_process.png" />
+    <Content Include="Account\images\icons\24x24\computer_search.png" />
+    <Content Include="Account\images\icons\24x24\database.png" />
+    <Content Include="Account\images\icons\24x24\database_accept.png" />
+    <Content Include="Account\images\icons\24x24\database_add.png" />
+    <Content Include="Account\images\icons\24x24\database_delete.png" />
+    <Content Include="Account\images\icons\24x24\database_down.png" />
+    <Content Include="Account\images\icons\24x24\database_help.png" />
+    <Content Include="Account\images\icons\24x24\database_info.png" />
+    <Content Include="Account\images\icons\24x24\database_lock.png" />
+    <Content Include="Account\images\icons\24x24\database_next.png" />
+    <Content Include="Account\images\icons\24x24\database_previous.png" />
+    <Content Include="Account\images\icons\24x24\database_process.png" />
+    <Content Include="Account\images\icons\24x24\database_remove.png" />
+    <Content Include="Account\images\icons\24x24\database_search.png" />
+    <Content Include="Account\images\icons\24x24\database_up.png" />
+    <Content Include="Account\images\icons\24x24\database_warning.png" />
+    <Content Include="Account\images\icons\24x24\delete.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_accept.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_add.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_delete.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_down.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_info.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_next.png" />
+    <Content Include="Account\images\icons\24x24\digital_camcorder_search.png" />
+    <Content Include="Account\images\icons\24x24\down.png" />
+    <Content Include="Account\images\icons\24x24\dvd.png" />
+    <Content Include="Account\images\icons\24x24\eject.png" />
+    <Content Include="Account\images\icons\24x24\excel_icon.png" />
+    <Content Include="Account\images\icons\24x24\exclamation_button.png" />
+    <Content Include="Account\images\icons\24x24\fast_forward.png" />
+    <Content Include="Account\images\icons\24x24\favorite.png" />
+    <Content Include="Account\images\icons\24x24\favorite_add.png" />
+    <Content Include="Account\images\icons\24x24\favorite_remove.png" />
+    <Content Include="Account\images\icons\24x24\filter.png" />
+    <Content Include="Account\images\icons\24x24\folder.png" />
+    <Content Include="Account\images\icons\24x24\folder_accept.png" />
+    <Content Include="Account\images\icons\24x24\folder_add.png" />
+    <Content Include="Account\images\icons\24x24\folder_delete.png" />
+    <Content Include="Account\images\icons\24x24\folder_down.png" />
+    <Content Include="Account\images\icons\24x24\folder_edit.png" />
+    <Content Include="Account\images\icons\24x24\folder_empty.png" />
+    <Content Include="Account\images\icons\24x24\folder_help.png" />
+    <Content Include="Account\images\icons\24x24\folder_info.png" />
+    <Content Include="Account\images\icons\24x24\folder_lock.png" />
+    <Content Include="Account\images\icons\24x24\folder_next.png" />
+    <Content Include="Account\images\icons\24x24\folder_previous.png" />
+    <Content Include="Account\images\icons\24x24\folder_process.png" />
+    <Content Include="Account\images\icons\24x24\folder_remove.png" />
+    <Content Include="Account\images\icons\24x24\folder_search.png" />
+    <Content Include="Account\images\icons\24x24\folder_up.png" />
+    <Content Include="Account\images\icons\24x24\folder_warning.png" />
+    <Content Include="Account\images\icons\24x24\globe.png" />
+    <Content Include="Account\images\icons\24x24\globe_accept.png" />
+    <Content Include="Account\images\icons\24x24\globe_add.png" />
+    <Content Include="Account\images\icons\24x24\globe_down.png" />
+    <Content Include="Account\images\icons\24x24\globe_info.png" />
+    <Content Include="Account\images\icons\24x24\globe_process.png" />
+    <Content Include="Account\images\icons\24x24\globe_remove.png" />
+    <Content Include="Account\images\icons\24x24\globe_search.png" />
+    <Content Include="Account\images\icons\24x24\globe_up.png" />
+    <Content Include="Account\images\icons\24x24\globe_warning.png" />
+    <Content Include="Account\images\icons\24x24\green_button.png" />
+    <Content Include="Account\images\icons\24x24\headphones.png" />
+    <Content Include="Account\images\icons\24x24\headphones_accept.png" />
+    <Content Include="Account\images\icons\24x24\headphones_add.png" />
+    <Content Include="Account\images\icons\24x24\headphones_delete.png" />
+    <Content Include="Account\images\icons\24x24\help.png" />
+    <Content Include="Account\images\icons\24x24\home.png" />
+    <Content Include="Account\images\icons\24x24\home_accept.png" />
+    <Content Include="Account\images\icons\24x24\home_info.png" />
+    <Content Include="Account\images\icons\24x24\home_remove.png" />
+    <Content Include="Account\images\icons\24x24\home_search.png" />
+    <Content Include="Account\images\icons\24x24\home_warning.png" />
+    <Content Include="Account\images\icons\24x24\image.png" />
+    <Content Include="Account\images\icons\24x24\images.png" />
+    <Content Include="Account\images\icons\24x24\image_accept.png" />
+    <Content Include="Account\images\icons\24x24\image_add.png" />
+    <Content Include="Account\images\icons\24x24\image_bmp.png" />
+    <Content Include="Account\images\icons\24x24\image_delete.png" />
+    <Content Include="Account\images\icons\24x24\image_down.png" />
+    <Content Include="Account\images\icons\24x24\image_edit.png" />
+    <Content Include="Account\images\icons\24x24\image_info.png" />
+    <Content Include="Account\images\icons\24x24\image_jpg.png" />
+    <Content Include="Account\images\icons\24x24\image_next.png" />
+    <Content Include="Account\images\icons\24x24\image_previous.png" />
+    <Content Include="Account\images\icons\24x24\image_remove.png" />
+    <Content Include="Account\images\icons\24x24\image_search.png" />
+    <Content Include="Account\images\icons\24x24\image_tif.png" />
+    <Content Include="Account\images\icons\24x24\image_up.png" />
+    <Content Include="Account\images\icons\24x24\info.png" />
+    <Content Include="Account\images\icons\24x24\ipod.png" />
+    <Content Include="Account\images\icons\24x24\ipod_accept.png" />
+    <Content Include="Account\images\icons\24x24\ipod_add.png" />
+    <Content Include="Account\images\icons\24x24\ipod_delete.png" />
+    <Content Include="Account\images\icons\24x24\ipod_down.png" />
+    <Content Include="Account\images\icons\24x24\ipod_info.png" />
+    <Content Include="Account\images\icons\24x24\ipod_next.png" />
+    <Content Include="Account\images\icons\24x24\ipod_search.png" />
+    <Content Include="Account\images\icons\24x24\lock.png" />
+    <Content Include="Account\images\icons\24x24\mail.png" />
+    <Content Include="Account\images\icons\24x24\mail_accept.png" />
+    <Content Include="Account\images\icons\24x24\mail_add.png" />
+    <Content Include="Account\images\icons\24x24\mail_delete.png" />
+    <Content Include="Account\images\icons\24x24\mail_down.png" />
+    <Content Include="Account\images\icons\24x24\mail_edit.png" />
+    <Content Include="Account\images\icons\24x24\mail_info.png" />
+    <Content Include="Account\images\icons\24x24\mail_next.png" />
+    <Content Include="Account\images\icons\24x24\mail_previous.png" />
+    <Content Include="Account\images\icons\24x24\mail_remove.png" />
+    <Content Include="Account\images\icons\24x24\mail_search.png" />
+    <Content Include="Account\images\icons\24x24\mail_up.png" />
+    <Content Include="Account\images\icons\24x24\mail_warning.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_accept.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_add.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_delete.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_down.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_info.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_next.png" />
+    <Content Include="Account\images\icons\24x24\mobile_phone_search.png" />
+    <Content Include="Account\images\icons\24x24\new_mail.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_accept.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_add.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_delete.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_down.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_edit.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_next.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_previous.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_remove.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_search.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_up.png" />
+    <Content Include="Account\images\icons\24x24\new_mail_warning.png" />
+    <Content Include="Account\images\icons\24x24\next.png" />
+    <Content Include="Account\images\icons\24x24\notebook.png" />
+    <Content Include="Account\images\icons\24x24\notebook_accept.png" />
+    <Content Include="Account\images\icons\24x24\notebook_add.png" />
+    <Content Include="Account\images\icons\24x24\notebook_delete.png" />
+    <Content Include="Account\images\icons\24x24\notebook_edit.png" />
+    <Content Include="Account\images\icons\24x24\notebook_lock.png" />
+    <Content Include="Account\images\icons\24x24\notebook_search.png" />
+    <Content Include="Account\images\icons\24x24\page.png" />
+    <Content Include="Account\images\icons\24x24\pages_add.png" />
+    <Content Include="Account\images\icons\24x24\pages_blank_add.png" />
+    <Content Include="Account\images\icons\24x24\pages_blank_warning.png" />
+    <Content Include="Account\images\icons\24x24\pages_warning.png" />
+    <Content Include="Account\images\icons\24x24\page_accept.png" />
+    <Content Include="Account\images\icons\24x24\page_add.png" />
+    <Content Include="Account\images\icons\24x24\page_blank.png" />
+    <Content Include="Account\images\icons\24x24\page_delete.png" />
+    <Content Include="Account\images\icons\24x24\page_down.png" />
+    <Content Include="Account\images\icons\24x24\page_edit.png" />
+    <Content Include="Account\images\icons\24x24\page_help.png" />
+    <Content Include="Account\images\icons\24x24\page_info.png" />
+    <Content Include="Account\images\icons\24x24\page_lock.png" />
+    <Content Include="Account\images\icons\24x24\page_next.png" />
+    <Content Include="Account\images\icons\24x24\page_previous.png" />
+    <Content Include="Account\images\icons\24x24\page_process.png" />
+    <Content Include="Account\images\icons\24x24\page_remove.png" />
+    <Content Include="Account\images\icons\24x24\page_search.png" />
+    <Content Include="Account\images\icons\24x24\page_up.png" />
+    <Content Include="Account\images\icons\24x24\page_warning.png" />
+    <Content Include="Account\images\icons\24x24\pdf_icon.png" />
+    <Content Include="Account\images\icons\24x24\play.png" />
+    <Content Include="Account\images\icons\24x24\previous.png" />
+    <Content Include="Account\images\icons\24x24\printer.png" />
+    <Content Include="Account\images\icons\24x24\printer_accept.png" />
+    <Content Include="Account\images\icons\24x24\printer_info.png" />
+    <Content Include="Account\images\icons\24x24\printer_remove.png" />
+    <Content Include="Account\images\icons\24x24\printer_search.png" />
+    <Content Include="Account\images\icons\24x24\printer_warning.png" />
+    <Content Include="Account\images\icons\24x24\process.png" />
+    <Content Include="Account\images\icons\24x24\process_accept.png" />
+    <Content Include="Account\images\icons\24x24\process_add.png" />
+    <Content Include="Account\images\icons\24x24\process_delete.png" />
+    <Content Include="Account\images\icons\24x24\process_down.png" />
+    <Content Include="Account\images\icons\24x24\process_help.png" />
+    <Content Include="Account\images\icons\24x24\process_info.png" />
+    <Content Include="Account\images\icons\24x24\process_lock.png" />
+    <Content Include="Account\images\icons\24x24\process_next.png" />
+    <Content Include="Account\images\icons\24x24\process_remove.png" />
+    <Content Include="Account\images\icons\24x24\process_warning.png" />
+    <Content Include="Account\images\icons\24x24\Question_add.png" />
+    <Content Include="Account\images\icons\24x24\record.png" />
+    <Content Include="Account\images\icons\24x24\red_button.png" />
+    <Content Include="Account\images\icons\24x24\remove.png" />
+    <Content Include="Account\images\icons\24x24\repeat.png" />
+    <Content Include="Account\images\icons\24x24\rewind.png" />
+    <Content Include="Account\images\icons\24x24\rss.png" />
+    <Content Include="Account\images\icons\24x24\rss_accept.png" />
+    <Content Include="Account\images\icons\24x24\rss_add.png" />
+    <Content Include="Account\images\icons\24x24\rss_delete.png" />
+    <Content Include="Account\images\icons\24x24\rss_down.png" />
+    <Content Include="Account\images\icons\24x24\rss_info.png" />
+    <Content Include="Account\images\icons\24x24\rss_next.png" />
+    <Content Include="Account\images\icons\24x24\rss_previous.png" />
+    <Content Include="Account\images\icons\24x24\rss_up.png" />
+    <Content Include="Account\images\icons\24x24\save.png" />
+    <Content Include="Account\images\icons\24x24\scanner.png" />
+    <Content Include="Account\images\icons\24x24\scanner_accept.png" />
+    <Content Include="Account\images\icons\24x24\scanner_add.png" />
+    <Content Include="Account\images\icons\24x24\scanner_delete.png" />
+    <Content Include="Account\images\icons\24x24\scanner_down.png" />
+    <Content Include="Account\images\icons\24x24\scanner_next.png" />
+    <Content Include="Account\images\icons\24x24\search.png" />
+    <Content Include="Account\images\icons\24x24\search_add.png" />
+    <Content Include="Account\images\icons\24x24\search_remove.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_accept.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_add.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_delete.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_down.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_next.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_previous.png" />
+    <Content Include="Account\images\icons\24x24\shopping_cart_up.png" />
+    <Content Include="Account\images\icons\24x24\skip_backward.png" />
+    <Content Include="Account\images\icons\24x24\skip_forward.png" />
+    <Content Include="Account\images\icons\24x24\speaker.png" />
+    <Content Include="Account\images\icons\24x24\speaker_accept.png" />
+    <Content Include="Account\images\icons\24x24\speaker_delete.png" />
+    <Content Include="Account\images\icons\24x24\speaker_remove.png" />
+    <Content Include="Account\images\icons\24x24\stop.png" />
+    <Content Include="Account\images\icons\24x24\unlock.png" />
+    <Content Include="Account\images\icons\24x24\up.png" />
+    <Content Include="Account\images\icons\24x24\usb_stick.png" />
+    <Content Include="Account\images\icons\24x24\usb_stick_accept.png" />
+    <Content Include="Account\images\icons\24x24\usb_stick_add.png" />
+    <Content Include="Account\images\icons\24x24\usb_stick_delete.png" />
+    <Content Include="Account\images\icons\24x24\usb_stick_down.png" />
+    <Content Include="Account\images\icons\24x24\usb_stick_next.png" />
+    <Content Include="Account\images\icons\24x24\user.png" />
+    <Content Include="Account\images\icons\24x24\users.png" />
+    <Content Include="Account\images\icons\24x24\users_accept.png" />
+    <Content Include="Account\images\icons\24x24\users_add.png" />
+    <Content Include="Account\images\icons\24x24\users_comments.png" />
+    <Content Include="Account\images\icons\24x24\users_delete.png" />
+    <Content Include="Account\images\icons\24x24\users_edit.png" />
+    <Content Include="Account\images\icons\24x24\user_accept.png" />
+    <Content Include="Account\images\icons\24x24\user_add.png" />
+    <Content Include="Account\images\icons\24x24\user_comment.png" />
+    <Content Include="Account\images\icons\24x24\user_delete.png" />
+    <Content Include="Account\images\icons\24x24\user_edit.png" />
+    <Content Include="Account\images\icons\24x24\user_info.png" />
+    <Content Include="Account\images\icons\24x24\user_search.png" />
+    <Content Include="Account\images\icons\24x24\warning.png" />
+    <Content Include="Account\images\icons\24x24\window.png" />
+    <Content Include="Account\images\icons\24x24\window_accept.png" />
+    <Content Include="Account\images\icons\24x24\window_add.png" />
+    <Content Include="Account\images\icons\24x24\window_delete.png" />
+    <Content Include="Account\images\icons\24x24\window_down.png" />
+    <Content Include="Account\images\icons\24x24\window_edit.png" />
+    <Content Include="Account\images\icons\24x24\window_info.png" />
+    <Content Include="Account\images\icons\24x24\window_next.png" />
+    <Content Include="Account\images\icons\24x24\window_remove.png" />
+    <Content Include="Account\images\icons\24x24\window_search.png" />
+    <Content Include="Account\images\icons\24x24\window_up.png" />
+    <Content Include="Account\images\icons\24x24\xls_icon.png" />
+    <Content Include="Account\images\icons\24x24\yellow_button.png" />
+    <Content Include="Account\images\icons\48x48\accept.png" />
+    <Content Include="Account\images\icons\48x48\add.png" />
+    <Content Include="Account\images\icons\48x48\application.png" />
+    <Content Include="Account\images\icons\48x48\application_accept.png" />
+    <Content Include="Account\images\icons\48x48\application_add.png" />
+    <Content Include="Account\images\icons\48x48\application_delete.png" />
+    <Content Include="Account\images\icons\48x48\application_down.png" />
+    <Content Include="Account\images\icons\48x48\application_edit.png" />
+    <Content Include="Account\images\icons\48x48\application_info.png" />
+    <Content Include="Account\images\icons\48x48\application_next.png" />
+    <Content Include="Account\images\icons\48x48\application_remove.png" />
+    <Content Include="Account\images\icons\48x48\application_search.png" />
+    <Content Include="Account\images\icons\48x48\application_up.png" />
+    <Content Include="Account\images\icons\48x48\blue_button.png" />
+    <Content Include="Account\images\icons\48x48\business_user.png" />
+    <Content Include="Account\images\icons\48x48\business_user_accept.png" />
+    <Content Include="Account\images\icons\48x48\business_user_add.png" />
+    <Content Include="Account\images\icons\48x48\business_user_comment.png" />
+    <Content Include="Account\images\icons\48x48\business_user_delete.png" />
+    <Content Include="Account\images\icons\48x48\business_user_edit.png" />
+    <Content Include="Account\images\icons\48x48\business_user_info.png" />
+    <Content Include="Account\images\icons\48x48\business_user_search.png" />
+    <Content Include="Account\images\icons\48x48\calendar.png" />
+    <Content Include="Account\images\icons\48x48\calendar_date.png" />
+    <Content Include="Account\images\icons\48x48\cd.png" />
+    <Content Include="Account\images\icons\48x48\cd_accept.png" />
+    <Content Include="Account\images\icons\48x48\cd_add.png" />
+    <Content Include="Account\images\icons\48x48\cd_delete.png" />
+    <Content Include="Account\images\icons\48x48\cd_info.png" />
+    <Content Include="Account\images\icons\48x48\cd_rw.png" />
+    <Content Include="Account\images\icons\48x48\cd_warning.png" />
+    <Content Include="Account\images\icons\48x48\chart.png" />
+    <Content Include="Account\images\icons\48x48\chart_accept.png" />
+    <Content Include="Account\images\icons\48x48\chart_add.png" />
+    <Content Include="Account\images\icons\48x48\chart_delete.png" />
+    <Content Include="Account\images\icons\48x48\chart_info.png" />
+    <Content Include="Account\images\icons\48x48\comment.png" />
+    <Content Include="Account\images\icons\48x48\comments.png" />
+    <Content Include="Account\images\icons\48x48\comment_accept.png" />
+    <Content Include="Account\images\icons\48x48\comment_add.png" />
+    <Content Include="Account\images\icons\48x48\comment_delete.png" />
+    <Content Include="Account\images\icons\48x48\comment_edit.png" />
+    <Content Include="Account\images\icons\48x48\computer.png" />
+    <Content Include="Account\images\icons\48x48\computers.png" />
+    <Content Include="Account\images\icons\48x48\computer_accept.png" />
+    <Content Include="Account\images\icons\48x48\computer_black.png" />
+    <Content Include="Account\images\icons\48x48\computer_delete.png" />
+    <Content Include="Account\images\icons\48x48\computer_network.png" />
+    <Content Include="Account\images\icons\48x48\computer_process.png" />
+    <Content Include="Account\images\icons\48x48\computer_search.png" />
+    <Content Include="Account\images\icons\48x48\database.png" />
+    <Content Include="Account\images\icons\48x48\database_accept.png" />
+    <Content Include="Account\images\icons\48x48\database_add.png" />
+    <Content Include="Account\images\icons\48x48\database_delete.png" />
+    <Content Include="Account\images\icons\48x48\database_down.png" />
+    <Content Include="Account\images\icons\48x48\database_help.png" />
+    <Content Include="Account\images\icons\48x48\database_info.png" />
+    <Content Include="Account\images\icons\48x48\database_lock.png" />
+    <Content Include="Account\images\icons\48x48\database_next.png" />
+    <Content Include="Account\images\icons\48x48\database_previous.png" />
+    <Content Include="Account\images\icons\48x48\database_process.png" />
+    <Content Include="Account\images\icons\48x48\database_remove.png" />
+    <Content Include="Account\images\icons\48x48\database_search.png" />
+    <Content Include="Account\images\icons\48x48\database_up.png" />
+    <Content Include="Account\images\icons\48x48\database_warning.png" />
+    <Content Include="Account\images\icons\48x48\delete.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_accept.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_add.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_delete.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_down.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_info.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_next.png" />
+    <Content Include="Account\images\icons\48x48\digital_camcorder_search.png" />
+    <Content Include="Account\images\icons\48x48\down.png" />
+    <Content Include="Account\images\icons\48x48\dvd.png" />
+    <Content Include="Account\images\icons\48x48\eject.png" />
+    <Content Include="Account\images\icons\48x48\fast_forward.png" />
+    <Content Include="Account\images\icons\48x48\favorite.png" />
+    <Content Include="Account\images\icons\48x48\favorite_add.png" />
+    <Content Include="Account\images\icons\48x48\favorite_remove.png" />
+    <Content Include="Account\images\icons\48x48\folder.png" />
+    <Content Include="Account\images\icons\48x48\folder_accept.png" />
+    <Content Include="Account\images\icons\48x48\folder_add.png" />
+    <Content Include="Account\images\icons\48x48\folder_delete.png" />
+    <Content Include="Account\images\icons\48x48\folder_down.png" />
+    <Content Include="Account\images\icons\48x48\folder_edit.png" />
+    <Content Include="Account\images\icons\48x48\folder_empty.png" />
+    <Content Include="Account\images\icons\48x48\folder_help.png" />
+    <Content Include="Account\images\icons\48x48\folder_info.png" />
+    <Content Include="Account\images\icons\48x48\folder_lock.png" />
+    <Content Include="Account\images\icons\48x48\folder_next.png" />
+    <Content Include="Account\images\icons\48x48\folder_previous.png" />
+    <Content Include="Account\images\icons\48x48\folder_process.png" />
+    <Content Include="Account\images\icons\48x48\folder_remove.png" />
+    <Content Include="Account\images\icons\48x48\folder_search.png" />
+    <Content Include="Account\images\icons\48x48\folder_up.png" />
+    <Content Include="Account\images\icons\48x48\folder_warning.png" />
+    <Content Include="Account\images\icons\48x48\globe.png" />
+    <Content Include="Account\images\icons\48x48\globe_accept.png" />
+    <Content Include="Account\images\icons\48x48\globe_add.png" />
+    <Content Include="Account\images\icons\48x48\globe_down.png" />
+    <Content Include="Account\images\icons\48x48\globe_info.png" />
+    <Content Include="Account\images\icons\48x48\globe_process.png" />
+    <Content Include="Account\images\icons\48x48\globe_remove.png" />
+    <Content Include="Account\images\icons\48x48\globe_search.png" />
+    <Content Include="Account\images\icons\48x48\globe_up.png" />
+    <Content Include="Account\images\icons\48x48\globe_warning.png" />
+    <Content Include="Account\images\icons\48x48\green_button.png" />
+    <Content Include="Account\images\icons\48x48\headphones.png" />
+    <Content Include="Account\images\icons\48x48\headphones_accept.png" />
+    <Content Include="Account\images\icons\48x48\headphones_add.png" />
+    <Content Include="Account\images\icons\48x48\headphones_delete.png" />
+    <Content Include="Account\images\icons\48x48\help.png" />
+    <Content Include="Account\images\icons\48x48\home.png" />
+    <Content Include="Account\images\icons\48x48\home_accept.png" />
+    <Content Include="Account\images\icons\48x48\home_info.png" />
+    <Content Include="Account\images\icons\48x48\home_remove.png" />
+    <Content Include="Account\images\icons\48x48\home_search.png" />
+    <Content Include="Account\images\icons\48x48\home_warning.png" />
+    <Content Include="Account\images\icons\48x48\image.png" />
+    <Content Include="Account\images\icons\48x48\images.png" />
+    <Content Include="Account\images\icons\48x48\image_accept.png" />
+    <Content Include="Account\images\icons\48x48\image_add.png" />
+    <Content Include="Account\images\icons\48x48\image_bmp.png" />
+    <Content Include="Account\images\icons\48x48\image_delete.png" />
+    <Content Include="Account\images\icons\48x48\image_down.png" />
+    <Content Include="Account\images\icons\48x48\image_edit.png" />
+    <Content Include="Account\images\icons\48x48\image_info.png" />
+    <Content Include="Account\images\icons\48x48\image_jpg.png" />
+    <Content Include="Account\images\icons\48x48\image_next.png" />
+    <Content Include="Account\images\icons\48x48\image_previous.png" />
+    <Content Include="Account\images\icons\48x48\image_remove.png" />
+    <Content Include="Account\images\icons\48x48\image_search.png" />
+    <Content Include="Account\images\icons\48x48\image_tif.png" />
+    <Content Include="Account\images\icons\48x48\image_up.png" />
+    <Content Include="Account\images\icons\48x48\info.png" />
+    <Content Include="Account\images\icons\48x48\ipod.png" />
+    <Content Include="Account\images\icons\48x48\ipod_accept.png" />
+    <Content Include="Account\images\icons\48x48\ipod_add.png" />
+    <Content Include="Account\images\icons\48x48\ipod_delete.png" />
+    <Content Include="Account\images\icons\48x48\ipod_down.png" />
+    <Content Include="Account\images\icons\48x48\ipod_info.png" />
+    <Content Include="Account\images\icons\48x48\ipod_next.png" />
+    <Content Include="Account\images\icons\48x48\ipod_search.png" />
+    <Content Include="Account\images\icons\48x48\lock.png" />
+    <Content Include="Account\images\icons\48x48\mail.png" />
+    <Content Include="Account\images\icons\48x48\mail_accept.png" />
+    <Content Include="Account\images\icons\48x48\mail_add.png" />
+    <Content Include="Account\images\icons\48x48\mail_delete.png" />
+    <Content Include="Account\images\icons\48x48\mail_down.png" />
+    <Content Include="Account\images\icons\48x48\mail_edit.png" />
+    <Content Include="Account\images\icons\48x48\mail_info.png" />
+    <Content Include="Account\images\icons\48x48\mail_next.png" />
+    <Content Include="Account\images\icons\48x48\mail_previous.png" />
+    <Content Include="Account\images\icons\48x48\mail_remove.png" />
+    <Content Include="Account\images\icons\48x48\mail_search.png" />
+    <Content Include="Account\images\icons\48x48\mail_up.png" />
+    <Content Include="Account\images\icons\48x48\mail_warning.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_accept.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_add.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_delete.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_down.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_info.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_next.png" />
+    <Content Include="Account\images\icons\48x48\mobile_phone_search.png" />
+    <Content Include="Account\images\icons\48x48\new_mail.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_accept.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_add.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_delete.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_down.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_edit.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_next.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_previous.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_remove.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_search.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_up.png" />
+    <Content Include="Account\images\icons\48x48\new_mail_warning.png" />
+    <Content Include="Account\images\icons\48x48\next.png" />
+    <Content Include="Account\images\icons\48x48\notebook.png" />
+    <Content Include="Account\images\icons\48x48\notebook_accept.png" />
+    <Content Include="Account\images\icons\48x48\notebook_add.png" />
+    <Content Include="Account\images\icons\48x48\notebook_delete.png" />
+    <Content Include="Account\images\icons\48x48\notebook_edit.png" />
+    <Content Include="Account\images\icons\48x48\notebook_lock.png" />
+    <Content Include="Account\images\icons\48x48\notebook_search.png" />
+    <Content Include="Account\images\icons\48x48\page.png" />
+    <Content Include="Account\images\icons\48x48\pages_add.png" />
+    <Content Include="Account\images\icons\48x48\pages_blank_add.png" />
+    <Content Include="Account\images\icons\48x48\pages_blank_warning.png" />
+    <Content Include="Account\images\icons\48x48\pages_warning.png" />
+    <Content Include="Account\images\icons\48x48\page_accept.png" />
+    <Content Include="Account\images\icons\48x48\page_add.png" />
+    <Content Include="Account\images\icons\48x48\page_blank.png" />
+    <Content Include="Account\images\icons\48x48\page_delete.png" />
+    <Content Include="Account\images\icons\48x48\page_down.png" />
+    <Content Include="Account\images\icons\48x48\page_edit.png" />
+    <Content Include="Account\images\icons\48x48\page_help.png" />
+    <Content Include="Account\images\icons\48x48\page_info.png" />
+    <Content Include="Account\images\icons\48x48\page_lock.png" />
+    <Content Include="Account\images\icons\48x48\page_next.png" />
+    <Content Include="Account\images\icons\48x48\page_previous.png" />
+    <Content Include="Account\images\icons\48x48\page_process.png" />
+    <Content Include="Account\images\icons\48x48\page_remove.png" />
+    <Content Include="Account\images\icons\48x48\page_search.png" />
+    <Content Include="Account\images\icons\48x48\page_up.png" />
+    <Content Include="Account\images\icons\48x48\page_warning.png" />
+    <Content Include="Account\images\icons\48x48\play.png" />
+    <Content Include="Account\images\icons\48x48\previous.png" />
+    <Content Include="Account\images\icons\48x48\printer.png" />
+    <Content Include="Account\images\icons\48x48\printer_accept.png" />
+    <Content Include="Account\images\icons\48x48\printer_info.png" />
+    <Content Include="Account\images\icons\48x48\printer_remove.png" />
+    <Content Include="Account\images\icons\48x48\printer_search.png" />
+    <Content Include="Account\images\icons\48x48\printer_warning.png" />
+    <Content Include="Account\images\icons\48x48\process.png" />
+    <Content Include="Account\images\icons\48x48\process_accept.png" />
+    <Content Include="Account\images\icons\48x48\process_add.png" />
+    <Content Include="Account\images\icons\48x48\process_delete.png" />
+    <Content Include="Account\images\icons\48x48\process_down.png" />
+    <Content Include="Account\images\icons\48x48\process_help.png" />
+    <Content Include="Account\images\icons\48x48\process_info.png" />
+    <Content Include="Account\images\icons\48x48\process_lock.png" />
+    <Content Include="Account\images\icons\48x48\process_next.png" />
+    <Content Include="Account\images\icons\48x48\process_remove.png" />
+    <Content Include="Account\images\icons\48x48\process_warning.png" />
+    <Content Include="Account\images\icons\48x48\record.png" />
+    <Content Include="Account\images\icons\48x48\red_button.png" />
+    <Content Include="Account\images\icons\48x48\remove.png" />
+    <Content Include="Account\images\icons\48x48\repeat.png" />
+    <Content Include="Account\images\icons\48x48\rewind.png" />
+    <Content Include="Account\images\icons\48x48\rss.png" />
+    <Content Include="Account\images\icons\48x48\rss_accept.png" />
+    <Content Include="Account\images\icons\48x48\rss_add.png" />
+    <Content Include="Account\images\icons\48x48\rss_delete.png" />
+    <Content Include="Account\images\icons\48x48\rss_down.png" />
+    <Content Include="Account\images\icons\48x48\rss_info.png" />
+    <Content Include="Account\images\icons\48x48\rss_next.png" />
+    <Content Include="Account\images\icons\48x48\rss_previous.png" />
+    <Content Include="Account\images\icons\48x48\rss_up.png" />
+    <Content Include="Account\images\icons\48x48\save.png" />
+    <Content Include="Account\images\icons\48x48\scanner.png" />
+    <Content Include="Account\images\icons\48x48\scanner_accept.png" />
+    <Content Include="Account\images\icons\48x48\scanner_add.png" />
+    <Content Include="Account\images\icons\48x48\scanner_delete.png" />
+    <Content Include="Account\images\icons\48x48\scanner_down.png" />
+    <Content Include="Account\images\icons\48x48\scanner_next.png" />
+    <Content Include="Account\images\icons\48x48\search.png" />
+    <Content Include="Account\images\icons\48x48\search_add.png" />
+    <Content Include="Account\images\icons\48x48\search_remove.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_accept.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_add.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_delete.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_down.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_next.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_previous.png" />
+    <Content Include="Account\images\icons\48x48\shopping_cart_up.png" />
+    <Content Include="Account\images\icons\48x48\skip_backward.png" />
+    <Content Include="Account\images\icons\48x48\skip_forward.png" />
+    <Content Include="Account\images\icons\48x48\speaker.png" />
+    <Content Include="Account\images\icons\48x48\speaker_accept.png" />
+    <Content Include="Account\images\icons\48x48\speaker_delete.png" />
+    <Content Include="Account\images\icons\48x48\speaker_remove.png" />
+    <Content Include="Account\images\icons\48x48\stop.png" />
+    <Content Include="Account\images\icons\48x48\unlock.png" />
+    <Content Include="Account\images\icons\48x48\up.png" />
+    <Content Include="Account\images\icons\48x48\usb_stick.png" />
+    <Content Include="Account\images\icons\48x48\usb_stick_accept.png" />
+    <Content Include="Account\images\icons\48x48\usb_stick_add.png" />
+    <Content Include="Account\images\icons\48x48\usb_stick_delete.png" />
+    <Content Include="Account\images\icons\48x48\usb_stick_down.png" />
+    <Content Include="Account\images\icons\48x48\usb_stick_next.png" />
+    <Content Include="Account\images\icons\48x48\user.png" />
+    <Content Include="Account\images\icons\48x48\users.png" />
+    <Content Include="Account\images\icons\48x48\users_accept.png" />
+    <Content Include="Account\images\icons\48x48\users_add.png" />
+    <Content Include="Account\images\icons\48x48\users_comments.png" />
+    <Content Include="Account\images\icons\48x48\users_delete.png" />
+    <Content Include="Account\images\icons\48x48\users_edit.png" />
+    <Content Include="Account\images\icons\48x48\user_accept.png" />
+    <Content Include="Account\images\icons\48x48\user_add.png" />
+    <Content Include="Account\images\icons\48x48\user_comment.png" />
+    <Content Include="Account\images\icons\48x48\user_delete.png" />
+    <Content Include="Account\images\icons\48x48\user_edit.png" />
+    <Content Include="Account\images\icons\48x48\user_info.png" />
+    <Content Include="Account\images\icons\48x48\user_search.png" />
+    <Content Include="Account\images\icons\48x48\warning.png" />
+    <Content Include="Account\images\icons\48x48\window.png" />
+    <Content Include="Account\images\icons\48x48\window_accept.png" />
+    <Content Include="Account\images\icons\48x48\window_add.png" />
+    <Content Include="Account\images\icons\48x48\window_delete.png" />
+    <Content Include="Account\images\icons\48x48\window_down.png" />
+    <Content Include="Account\images\icons\48x48\window_edit.png" />
+    <Content Include="Account\images\icons\48x48\window_info.png" />
+    <Content Include="Account\images\icons\48x48\window_next.png" />
+    <Content Include="Account\images\icons\48x48\window_remove.png" />
+    <Content Include="Account\images\icons\48x48\window_search.png" />
+    <Content Include="Account\images\icons\48x48\window_up.png" />
+    <Content Include="Account\images\icons\arrow_right.gif" />
+    <Content Include="Account\images\icons\Binoculars.gif" />
+    <Content Include="Account\images\icons\Cancel.png" />
+    <Content Include="Account\images\icons\check.gif" />
+    <Content Include="Account\images\icons\close.png" />
+    <Content Include="Account\images\icons\collapseblue.jpg" />
+    <Content Include="Account\images\icons\Delete-Red.png" />
+    <Content Include="Account\images\icons\delete.png" />
+    <Content Include="Account\images\icons\Down.gif" />
+    <Content Include="Account\images\icons\edit.png" />
+    <Content Include="Account\images\icons\exclamation.gif" />
+    <Content Include="Account\images\icons\expandblue.jpg" />
+    <Content Include="Account\images\icons\failure.jpg" />
+    <Content Include="Account\images\icons\folder-open.gif" />
+    <Content Include="Account\images\icons\folder.gif" />
+    <Content Include="Account\images\icons\go.png" />
+    <Content Include="Account\images\icons\info.gif" />
+    <Content Include="Account\images\icons\logout.png" />
+    <Content Include="Account\images\icons\map_orange_icon.png" />
+    <Content Include="Account\images\icons\map_pink_icon.png" />
+    <Content Include="Account\images\icons\map_pink_icon2.png" />
+    <Content Include="Account\images\icons\mm_admin.png" />
+    <Content Include="Account\images\icons\mm_home.png" />
+    <Content Include="Account\images\icons\mm_myaccount.png" />
+    <Content Include="Account\images\icons\mm_neworders.png" />
+    <Content Include="Account\images\icons\mm_search.png" />
+    <Content Include="Account\images\icons\money_dollar.png" />
+    <Content Include="Account\images\icons\moveleft.png" />
+    <Content Include="Account\images\icons\moveleftall.png" />
+    <Content Include="Account\images\icons\moveright.png" />
+    <Content Include="Account\images\icons\moverightall.png" />
+    <Content Include="Account\images\icons\node.gif" />
+    <Content Include="Account\images\icons\Remove.gif" />
+    <Content Include="Account\images\icons\required.gif" />
+    <Content Include="Account\images\icons\save.png" />
+    <Content Include="Account\images\icons\Spell_Checker_Icon.png" />
+    <Content Include="Account\images\icons\success.jpg" />
+    <Content Include="Account\images\icons\tb_cancel.png" />
+    <Content Include="Account\images\icons\tb_logout.png" />
+    <Content Include="Account\images\icons\tb_reset.png" />
+    <Content Include="Account\images\icons\tb_save.png" />
+    <Content Include="Account\images\icons\tb_search.png" />
+    <Content Include="Account\images\icons\tickler.gif" />
+    <Content Include="Account\images\icons\trashcan-delete.png" />
+    <Content Include="Account\images\icons\validate_icon.gif" />
+    <Content Include="Account\images\loading.gif" />
+    <Content Include="Account\images\lock.png" />
+    <Content Include="Account\images\login\CAM.png" />
+    <Content Include="Account\images\login\CDM.png" />
+    <Content Include="Account\images\login\CSI.png" />
+    <Content Include="Account\images\login\CSI_Small.png" />
+    <Content Include="Account\images\login\PasswordRecovery.png" />
+    <Content Include="Account\images\login\RRD-logo-1c-white.gif" />
+    <Content Include="Account\images\login\skyline_1.png" />
+    <Content Include="Account\images\login\skyline_10.png" />
+    <Content Include="Account\images\login\skyline_2.png" />
+    <Content Include="Account\images\login\skyline_3.png" />
+    <Content Include="Account\images\login\skyline_4.png" />
+    <Content Include="Account\images\login\skyline_5.png" />
+    <Content Include="Account\images\login\skyline_6.png" />
+    <Content Include="Account\images\login\skyline_7.png" />
+    <Content Include="Account\images\login\skyline_8.png" />
+    <Content Include="Account\images\login\skyline_9.png" />
+    <Content Include="Account\images\login\stock_lock.png" />
+    <Content Include="Account\images\login\SystemAccess.png" />
+    <Content Include="Account\images\logo.png" />
+    <Content Include="Account\images\logos\freddie_mac_logo.gif" />
+    <Content Include="Account\images\logos\image002.png" />
+    <Content Include="Account\images\logos\require_logo_2013.png" />
+    <Content Include="Account\images\logos\rrd_logo_blk.gif" />
+    <Content Include="Account\images\logos\rrd_logo_wht.gif" />
+    <Content Include="Account\images\minus.png" />
+    <Content Include="Account\images\Nav2.gif" />
+    <Content Include="Account\images\new.jpg" />
+    <Content Include="Account\images\next.gif" />
+    <Content Include="Account\images\plus.png" />
+    <Content Include="Account\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Account\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Account\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Account\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="Account\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Account\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Account\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Account\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Account\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="Account\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="Account\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Account\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Account\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Account\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Account\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Account\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Account\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Account\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Account\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Account\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Account\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Account\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Account\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Account\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Account\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="Account\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Account\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Account\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Account\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Account\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="Account\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="Account\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Account\images\previous.gif" />
+    <Content Include="Account\images\RRD_logo.gif" />
+    <Content Include="Account\images\sort_asc.gif" />
+    <Content Include="Account\images\sort_desc.gif" />
+    <Content Include="Account\images\spriteblue.png" />
+    <Content Include="Account\images\spritegray.png" />
+    <Content Include="Account\images\submit.gif" />
+    <Content Include="Account\images\tablebacground001.gif" />
+    <Content Include="Account\images\tablebacground002.gif" />
+    <Content Include="Account\images\tablebacground003.gif" />
+    <Content Include="Account\images\tablebacground004.gif" />
+    <Content Include="Account\images\tablebacground005.gif" />
+    <Content Include="Account\images\tb_topsprite.png" />
+    <Content Include="Account\images\ToolbarBackground.jpg" />
+    <Content Include="Account\images\tree\arrow_up_left.png" />
+    <Content Include="Account\images\tree\blank.gif" />
+    <Content Include="Account\images\tree\folder.png" />
+    <Content Include="Account\images\tree\gif.png" />
+    <Content Include="Account\images\tree\image001.gif" />
+    <Content Include="Account\images\tree\image002.gif" />
+    <Content Include="Account\images\tree\image003.gif" />
+    <Content Include="Account\images\tree\image004.gif" />
+    <Content Include="Account\images\tree\image005.gif" />
+    <Content Include="Account\images\tree\image006.gif" />
+    <Content Include="Account\images\tree\jpeg.png" />
+    <Content Include="Account\images\tree\jpg.png" />
+    <Content Include="Account\images\tree\pdf.png" />
+    <Content Include="Account\images\tree\pdf16x16.png" />
+    <Content Include="Account\images\tree\png.png" />
+    <Content Include="Account\images\tree\treebackground.gif" />
+    <Content Include="Account\images\tree\unknown.png" />
+    <Content Include="Account\images\updatedb.gif" />
+    <Content Include="Account\images\vb.gif" />
+    <Content Include="Account\images\working.gif" />
+    <Content Include="Account\images\wsd1.PNG" />
+    <Content Include="Account\images\wsd2.PNG" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Logoff.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="App_Code\DynamicRadGrid.cs" />
+    <Content Include="App_Code\Extentions.cs" />
+    <Compile Include="Data\AdminDataContext.cs">
+      <DependentUpon>AdminDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appControls\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appControls\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appForms\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appForms\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appPages\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appPages\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appSections\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\appSections\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Filters\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DynamicRadGrid.cs" />
+    <Compile Include="MySession.cs" />
+    <Compile Include="UI\BaseGridControl.aspx.cs">
+      <DependentUpon>BaseGridControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseGridControl.aspx.designer.cs">
+      <DependentUpon>BaseGridControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BaseGridControlSettings.aspx.cs">
+      <DependentUpon>BaseGridControlSettings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\BaseGridControlSettings.aspx.designer.cs">
+      <DependentUpon>BaseGridControlSettings.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ControlPicker.aspx.cs">
+      <DependentUpon>ControlPicker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ControlPicker.aspx.designer.cs">
+      <DependentUpon>ControlPicker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ManagePages.aspx.cs">
+      <DependentUpon>ManagePages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ManagePages.aspx.designer.cs">
+      <DependentUpon>ManagePages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SiteMain.Master.cs">
+      <DependentUpon>SiteMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteMain.Master.designer.cs">
+      <DependentUpon>SiteMain.Master</DependentUpon>
+    </Compile>
+    <Content Include="App_Themes\GRESAdmin\Covius.js" />
+    <Content Include="App_Themes\GRESAdmin\DashboardBuilder.Main.css" />
+    <Content Include="App_Themes\GRESAdmin\delete.png" />
+    <Content Include="App_Themes\GRESAdmin\en_localization.js" />
+    <Content Include="App_Themes\GRESAdmin\form.png" />
+    <Content Include="App_Themes\GRESAdmin\FormBuilder.ConfigBar.css" />
+    <Content Include="App_Themes\GRESAdmin\FormBuilder.ConfigBar.Panel.css" />
+    <Content Include="App_Themes\GRESAdmin\FormBuilder.Main.css" />
+    <Content Include="App_Themes\GRESAdmin\form_edit.png" />
+    <Content Include="App_Themes\GRESAdmin\headerbg.jpg" />
+    <Content Include="App_Themes\GRESAdmin\ico-loader.gif" />
+    <Content Include="App_Themes\GRESAdmin\link.png" />
+    <Content Include="App_Themes\GRESAdmin\list-icon-hover.jpg" />
+    <Content Include="App_Themes\GRESAdmin\list-icon.jpg" />
+    <Content Include="App_Themes\GRESAdmin\navbg.jpg" />
+    <Content Include="App_Themes\GRESAdmin\New.gif" />
+    <Content Include="App_Themes\GRESAdmin\preview.gif" />
+    <Content Include="App_Themes\GRESAdmin\showallitems.gif" />
+    <Content Include="App_Themes\GRESAdmin\Styles.css" />
+    <Content Include="App_Themes\GRESAdmin\sub-forms.png" />
+    <Content Include="App_Themes\GRESAdmin\text-number-icon.png" />
+    <Content Include="Content\css\dev.css" />
+    <Content Include="Content\css\HTMLForm.css" />
+    <Content Include="Content\css\jquery-ui.min.css" />
+    <Content Include="Content\css\json-path-picker.css" />
+    <Content Include="Content\images\icons\ico-padlock-red-128.png" />
+    <Content Include="DynamicData\CustomPages\appControls\Edit.aspx" />
+    <Content Include="DynamicData\CustomPages\appForms\Edit.aspx" />
+    <Content Include="DynamicData\CustomPages\appGroupItems\Edit.aspx" />
+    <Content Include="DynamicData\CustomPages\appGroupItems\Insert.aspx" />
+    <Content Include="DynamicData\CustomPages\appGroupItems\List.aspx" />
+    <Content Include="DynamicData\CustomPages\appMainMenus\Edit.aspx" />
+    <Content Include="DynamicData\CustomPages\appMainMenus\Insert.aspx" />
+    <Content Include="DynamicData\CustomPages\appSections\Edit.aspx" />
+    <Content Include="DynamicData\CustomPages\appSettings\Edit.aspx" />
+    <Content Include="DynamicData\FieldTemplates\SkinPicker_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\Textarea_Edit.ascx" />
+    <Content Include="DynamicData\TextAreaContent.css" />
+    <Content Include="Images\3.png" />
+    <Content Include="Images\4.png" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\chart-icons\icon-grids-16.png" />
+    <Content Include="Images\chart-icons\icon-grids-512.png" />
+    <Content Include="Images\chart-icons\icon-tiles-16.png" />
+    <Content Include="Images\chart-icons\icon-tiles-512.png" />
+    <Content Include="Images\clear.png" />
+    <Content Include="Images\companyLogo.png" />
+    <Content Include="Images\dustbin.png" />
+    <Content Include="Images\ico-delete-method.png" />
+    <Content Include="Images\ico-delete2.png" />
+    <Content Include="Images\ico-get-method.jpg" />
+    <Content Include="Images\ico-get-method.png" />
+    <Content Include="Images\ico-home.png" />
+    <Content Include="Images\ico-hyperlink.png" />
+    <Content Include="Images\ico-insert.png" />
+    <Content Include="Images\ico-menu.png" />
+    <Content Include="Images\ico-newwindow.png" />
+    <Content Include="Images\ico-no.png" />
+    <Content Include="Images\ico-other.png" />
+    <Content Include="Images\ico-page.png" />
+    <Content Include="Images\ico-plug.png" />
+    <Content Include="Images\ico-post-method.png" />
+    <Content Include="Images\ico-put-method.png" />
+    <Content Include="Images\ico-select.png" />
+    <Content Include="Images\ico-tool.png" />
+    <Content Include="App_Themes\GRESAdmin\WebResource.png" />
+    <Content Include="AssignInspector.aspx" />
+    <Content Include="Content\css\bootstrap-grid.css" />
+    <Content Include="Content\css\bootstrap-grid.min.css" />
+    <Content Include="Content\css\bootstrap-reboot.css" />
+    <Content Include="Content\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\css\bootstrap.css" />
+    <Content Include="Content\css\bootstrap.min.css" />
+    <Content Include="Content\css\easy-autocomplete.min.css" />
+    <Content Include="Content\css\easy-autocomplete.themes.min.css" />
+    <Content Include="Content\css\toastr.min.css" />
+    <Content Include="Content\js\bootstrap.bundle.js" />
+    <Content Include="Content\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
+    <Content Include="Content\js\jquery-1.10.2.min.js" />
+    <Content Include="Content\js\jquery-1.11.2.min.js" />
+    <Content Include="Content\js\jquery.easy-autocomplete.min.js" />
+    <Content Include="Content\js\toastr.min.js" />
+    <Content Include="Default.aspx" />
+    <Compile Include="Data\AdminDataContext.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminDataContext.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Admin.Metadata.cs" />
+    <Compile Include="App_Code\ExtensionMethods.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="App_Code\HideColumnFieldsManager.cs" />
+    <Compile Include="App_Code\HideColumnInAttribute.cs" />
+    <Compile Include="App_Code\ValuesListAttribute.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\CustomPages\appControls\List.aspx" />
+    <Content Include="DynamicData\CustomPages\appForms\Insert.aspx" />
+    <Content Include="DynamicData\CustomPages\appPages\Details.aspx" />
+    <Content Include="DynamicData\CustomPages\appPages\Edit.aspx" />
+    <Content Include="DynamicData\CustomPages\appPages\Insert.aspx" />
+    <Content Include="DynamicData\CustomPages\appSections\Insert.aspx" />
+    <Content Include="DynamicData\FieldTemplates\BinaryImage_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\ColorPickerTelerik_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\HTMLEditorTelerik.ascx" />
+    <Content Include="DynamicData\FieldTemplates\HTMLEditorTelerik_Edit.ascx" />
+    <Content Include="DynamicData\FieldTemplates\SQLCommand.ascx" />
+    <Content Include="DynamicData\FieldTemplates\SQLCommand_Edit.ascx" />
+    <Content Include="DynamicData\Filters\Boolean.ascx" />
+    <Content Include="DynamicData\Filters\Enumeration.ascx" />
+    <Content Include="DynamicData\Filters\ForeignKey.ascx" />
+    <Content Include="DynamicData\PageTemplates\List.aspx" />
+    <Content Include="DynamicData\PageTemplates\ListDetails.aspx" />
+    <Content Include="DynamicData\RadEditorContentArea.css" />
+    <Content Include="DynamicData\SQLCommandTools.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Global.asax" />
+    <Compile Include="DynamicData\FieldTemplates\BinaryImage_Edit.ascx.cs">
+      <DependentUpon>BinaryImage_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\BinaryImage_Edit.ascx.designer.cs">
+      <DependentUpon>BinaryImage_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ColorPickerTelerik_Edit.ascx.cs">
+      <DependentUpon>ColorPickerTelerik_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ColorPickerTelerik_Edit.ascx.designer.cs">
+      <DependentUpon>ColorPickerTelerik_Edit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Content Include="Images\0.png" />
+    <Content Include="Images\1.png" />
+    <Content Include="Images\2.png" />
+    <Content Include="Images\AddRecord.gif" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\checked.gif" />
+    <Content Include="Images\delete.gif" />
+    <Content Include="Images\Edit.gif" />
+    <Content Include="Images\false.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\form.png" />
+    <Content Include="Images\group.png" />
+    <Content Include="Images\ico-delete.png" />
+    <Content Include="Images\ico-pencil.png" />
+    <Content Include="Images\chart-icons\icon-area-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-bar-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-bubble-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-column-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-donut-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-line-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-pie-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-scatter-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-scatterline-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-stepline-chart-512.png" />
+    <Content Include="Images\chart-icons\icon-area-chart-16.png" />
+    <Content Include="Images\ico-update.png" />
+    <Content Include="Images\icon-minus.png" />
+    <Content Include="Images\icon-plus.png" />
+    <Content Include="Images\IconClose.png" />
+    <Content Include="Images\IconPlus.png" />
+    <Content Include="Images\IconRefresh.png" />
+    <Content Include="Images\icons8-area-chart-48.png" />
+    <Content Include="Images\chart-icons\icon-bar-chart-16.png" />
+    <Content Include="Images\icons8-bar-chart-48.png" />
+    <Content Include="Images\chart-icons\icon-bubble-chart-16.png" />
+    <Content Include="Images\chart-icons\icon-column-chart-16.png" />
+    <Content Include="Images\chart-icons\icon-doughnut-chart-16.png" />
+    <Content Include="Images\icons8-doughnut-chart-48.png" />
+    <Content Include="Images\chart-icons\icon-line-chart-16.png" />
+    <Content Include="Images\icons8-grids-48.png" />
+    <Content Include="Images\icons8-line-chart-48.png" />
+    <Content Include="Images\chart-icons\icon-pie-chart-16.png" />
+    <Content Include="Images\icons8-pie-chart-48.png" />
+    <Content Include="Images\chart-icons\icon-scatter-plot-16.png" />
+    <Content Include="Images\icons8-scatter-plot-48.png" />
+    <Content Include="Images\chart-icons\icon-scatterline-chart-16.png" />
+    <Content Include="Images\chart-icons\icon-stepline-chart-16.png" />
+    <Content Include="Images\icons8-tiles-48.png" />
+    <Content Include="Images\icoSettings16.png" />
+    <Content Include="Images\link.png" />
+    <Content Include="Images\lock_icon_16x16.png" />
+    <Content Include="Images\lock_icon_20x20.png" />
+    <Content Include="Images\MenuSkins\skin_Custom.png" />
+    <Content Include="Images\ok.gif" />
+    <Content Include="Images\page.png" />
+    <Content Include="Images\Preview.png" />
+    <Content Include="App_Themes\GRESAdmin\privilege.png" />
+    <Content Include="Images\Refresh.gif" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\remove.png" />
+    <Content Include="Images\Rolling.gif" />
+    <Content Include="Images\section.png" />
+    <Content Include="Images\selection.png" />
+    <Content Include="Images\sql.gif" />
+    <Content Include="Images\stock_lock.png" />
+    <Content Include="Images\true.png" />
+    <Content Include="Images\unlock_icon_16x16.png" />
+    <Content Include="Images\unlock_icon_20x20.png" />
+    <Content Include="Images\working.gif" />
+    <Content Include="More.aspx" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.Core.dll" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.EventMetadataProvider.dll" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.MSSQLMetadataProvider.dll" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.View.dll" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.View.xml" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.Web.Server.dll" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.Web.Server.xml" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.Web.WebForms.dll" />
+    <Content Include="ProjectDLLs\ActiveQueryBuilder.Web.WebForms.xml" />
+    <Content Include="ProjectDLLs\AppEngine.dll" />
+    <Content Include="ProjectDLLs\GleamTech.Core.dll" />
+    <Content Include="ProjectDLLs\GleamTech.FileUltimate.dll" />
+    <Content Include="ProjectDLLs\GleamTech.ImageUltimate.dll" />
+    <Content Include="ProjectDLLs\HtmlAgilityPack.dll" />
+    <Content Include="Redirect.aspx" />
+    <Content Include="Scripts\app\common\common.js" />
+    <Content Include="Scripts\app\widgets\telerik\areachartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\barchartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\bubblechartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\columnchartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\common.js" />
+    <Content Include="Scripts\app\widgets\telerik\dashboardbuilder.js" />
+    <Content Include="Scripts\app\widgets\telerik\donutchartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\gridwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\linechartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\mapchartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\piechartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\scatterlinechartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\scatterchartwidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\standalonewidget.js" />
+    <Content Include="Scripts\app\widgets\telerik\steplinechartwidget.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\json-path-picker.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="UI\ActiveQueryBuilderConfiguration.aspx" />
+    <Content Include="UI\BaseWidgetControl.aspx" />
+    <Content Include="UI\ButtonSettings.aspx" />
+    <Content Include="UI\ExternalLinkConfigurationForm.aspx" />
+    <Content Include="UI\ManifestFileConfiguration.aspx" />
+    <Content Include="UI\ApiAddEndpoint.aspx" />
+    <Content Include="UI\ApiChainExecuter.aspx" />
+    <Content Include="UI\ApiChainExecuteResult.aspx" />
+    <Content Include="UI\ApiMethodConfiguration.aspx" />
+    <Content Include="UI\ApiChain.aspx" />
+    <Content Include="UI\ApiChainManager.aspx" />
+    <Content Include="UI\ApiChainReturnTemplateConfiguration.aspx" />
+    <Content Include="UI\AppDataImportTemplate.aspx" />
+    <Content Include="UI\ApiDeleteEndpoint.aspx" />
+    <Content Include="UI\ApiEndpointDetail.aspx" />
+    <Content Include="UI\ApiManager.aspx" />
+    <Content Include="UI\ApiExecuter.aspx" />
+    <Content Include="UI\ApiMethodDetail.aspx" />
+    <Content Include="UI\AppFieldAutoPopulation.aspx" />
+    <Content Include="UI\AssignPrivileges.aspx" />
+    <Content Include="UI\BaseGridControl.aspx" />
+    <Content Include="UI\BaseGridControlSettings.aspx" />
+    <Content Include="UI\BITemplates\AreaChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\GridTemplate.aspx" />
+    <Content Include="UI\BITemplates\StandAloneTileTemplate.aspx" />
+    <Content Include="UI\BITemplates\StepLineChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\BarChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\BubbleChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\ColumnChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\DonutChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\LineChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\MapTemplate.aspx" />
+    <Content Include="UI\BITemplates\PieChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\ScatterChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\ScatterLineChartTemplate.aspx" />
+    <Content Include="UI\BITemplates\TestModal.aspx" />
+    <Content Include="UI\ControlPicker.aspx" />
+    <Content Include="Home.aspx" />
+    <Content Include="UI\ControlSelector.aspx" />
+    <Content Include="UI\CustomQueryBuilder.aspx" />
+    <Content Include="UI\DashboardBuilder.aspx" />
+    <Content Include="UI\DataPointConfiguration.aspx" />
+    <Content Include="UI\Default.aspx" />
+    <Content Include="UI\DocumentBuilder.aspx" />
+    <Content Include="UI\DocumentConfiguration.aspx" />
+    <Content Include="UI\FieldAutoPopulation.aspx" />
+    <Content Include="UI\FolderVersioningConfiguration.aspx" />
+    <Content Include="UI\FormBuilder.aspx" />
+    <Content Include="UI\FormBuilderOverview.aspx" />
+    <Content Include="UI\GroupSelection.aspx" />
+    <Content Include="UI\InboundApiConfiguration.aspx" />
+    <Content Include="UI\InboundApiManager.aspx" />
+    <Content Include="UI\JsonPathFinder.aspx" />
+    <Content Include="UI\ManageMainMenu.aspx" />
+    <Content Include="UI\ManagePages.aspx" />
+    <Content Include="Site.master" />
+    <Compile Include="Site.master.cs">
+      <DependentUpon>Site.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.master.designer.cs">
+      <DependentUpon>Site.master</DependentUpon>
+    </Compile>
+    <Content Include="UI\ManifestConfiguration.aspx" />
+    <Content Include="UI\MaskControls.aspx" />
+    <Content Include="UI\MaskGroupPopUp.aspx" />
+    <Content Include="UI\Security.aspx" />
+    <Content Include="UI\SQLGenerator.aspx" />
+    <Content Include="UI\Templates\ChartTemplate.aspx" />
+    <Content Include="UI\Templates\DynamicAppFieldPage.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\ButtonTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\CheckboxTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\DatepickerTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\DropdownElementTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\DropzoneTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\EmailTextBoxTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\ExternalLinkTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\LabelTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\NumericTextBoxTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\RadioButtonTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\SubFormAreaTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\TextAreaTemplate.aspx" />
+    <Content Include="UI\Templates\FormBuilderTemplates\TextBoxTemplate.aspx" />
+    <Content Include="UI\TreeSearchResult.aspx" />
+    <Content Include="UI\Users.aspx" />
+    <Content Include="UserControls\DataPointConfiguration.ascx" />
+    <Content Include="UserControls\UserForm.ascx" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+    <Content Include="DynamicData\web.config" />
+    <Content Include="DynamicData\Content\GridViewPager.ascx" />
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\Content\GridViewPager.ascx.designer.cs">
+      <DependentUpon>GridViewPager.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\Content\Images\Back.gif" />
+    <Content Include="DynamicData\Content\Images\header_back.gif" />
+    <Content Include="DynamicData\Content\Images\PgFirst.gif" />
+    <Content Include="DynamicData\Content\Images\PgLast.gif" />
+    <Content Include="DynamicData\Content\Images\PgNext.gif" />
+    <Content Include="DynamicData\Content\Images\PgPrev.gif" />
+    <Content Include="DynamicData\Content\Images\plus.gif" />
+    <Content Include="DynamicData\EntityTemplates\Default.ascx" />
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default.ascx.designer.cs">
+      <DependentUpon>Default.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\EntityTemplates\Default_Edit.ascx" />
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Edit.ascx.designer.cs">
+      <DependentUpon>Default_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\EntityTemplates\Default_Insert.ascx" />
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\EntityTemplates\Default_Insert.ascx.designer.cs">
+      <DependentUpon>Default_Insert.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Boolean.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean.ascx.designer.cs">
+      <DependentUpon>Boolean.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Boolean_Edit.ascx.designer.cs">
+      <DependentUpon>Boolean_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Children.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children.ascx.designer.cs">
+      <DependentUpon>Children.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
+      <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.designer.cs">
+      <DependentUpon>DateTime.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\DateTime_Edit.ascx.designer.cs">
+      <DependentUpon>DateTime_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Decimal_Edit.ascx.designer.cs">
+      <DependentUpon>Decimal_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\EmailAddress.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\EmailAddress.ascx.designer.cs">
+      <DependentUpon>EmailAddress.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Enumeration.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration.ascx.designer.cs">
+      <DependentUpon>Enumeration.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Enumeration_Edit.ascx.designer.cs">
+      <DependentUpon>Enumeration_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\ForeignKey.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey.ascx.designer.cs">
+      <DependentUpon>ForeignKey.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\ForeignKey_Edit.ascx.designer.cs">
+      <DependentUpon>ForeignKey_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Integer_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Integer_Edit.ascx.designer.cs">
+      <DependentUpon>Integer_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\MultilineText_Edit.ascx.designer.cs">
+      <DependentUpon>MultilineText_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Text.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text.ascx.designer.cs">
+      <DependentUpon>Text.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Text_Edit.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Text_Edit.ascx.designer.cs">
+      <DependentUpon>Text_Edit.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\FieldTemplates\Url.ascx" />
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\Url.ascx.designer.cs">
+      <DependentUpon>Url.ascx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\Details.aspx" />
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\Edit.aspx" />
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Content Include="DynamicData\PageTemplates\Insert.aspx" />
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\PageTemplates\Insert.aspx.designer.cs">
+      <DependentUpon>Insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+    </Compile>
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="XML\FullSetOfTools.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\GRESAdmin\Layout.skin" />
+    <Content Include="BaseGridControl.Master" />
+    <Content Include="Content\css\bootstrap-grid.css.map" />
+    <Content Include="Content\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\css\bootstrap.css.map" />
+    <Content Include="Content\css\bootstrap.min.css.map" />
+    <Content Include="Content\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\js\bootstrap.js.map" />
+    <Content Include="Content\js\bootstrap.min.js.map" />
+    <Content Include="Account\images\icons\24x24\Question.xcf" />
+    <Content Include="BaseWidgetControl.Master" />
+    <None Include="Data\AdminDataContext.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AdminDataContext.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="SiteMain.Master" />
+    <Content Include="Web.Sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="PageForm.Master" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\AppAdmin on GresWeb01.pubxml" />
+    <None Include="Properties\PublishProfiles\ATLDevWeb AppAdmin.pubxml" />
+    <None Include="Properties\PublishProfiles\CSIAdmin.pubxml" />
+    <None Include="Properties\PublishProfiles\CSIDemo.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="SiteLogin.Master" />
+    <None Include="Properties\PublishProfiles\LocalXfer.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\AdminDataContext.dbml.layout">
+      <DependentUpon>AdminDataContext.dbml</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppEngine.Common\AppEngine.Common.csproj">
+      <Project>{bcfbdea6-50a9-477f-a3ab-eb4bb3e3e3cb}</Project>
+      <Name>AppEngine.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppEngine.Domain\AppEngine.Domain.csproj">
+      <Project>{ca8a1ecd-ed97-4246-a433-025a36707bf8}</Project>
+      <Name>AppEngine.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppEngine.DTO\AppEngine.DTO.csproj">
+      <Project>{78e36411-d5d4-49e9-908f-5ff2e3bfbfc1}</Project>
+      <Name>AppEngine.DTO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppEngine.Infrastructure\AppEngine.Infrastructure.csproj">
+      <Project>{6b3229e3-3299-4f1f-a328-108f16d623e7}</Project>
+      <Name>AppEngine.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppEngine\AppEngine.csproj">
+      <Project>{34cf129c-5a04-47b1-88ca-408c3f9e46e4}</Project>
+      <Name>AppEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50787</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44361/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets'))" />
+  </Target>
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

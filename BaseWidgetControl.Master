@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseWidgetControl.master.cs" Inherits="RRD.GRESAdmin.BaseWidgetControl" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        html, body, form
+        {
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <telerik:RadScriptManager ID="RadScriptManager1" runat="server">
+        </telerik:RadScriptManager>
+        <div>
+            <telerik:RadTabStrip ID="RadTabStrip1" runat="server" SelectedIndex="0" AutoPostBack="True"
+                OnTabClick="RadTabStrip1_TabClick">
+                <tabs>
+                    <telerik:RadTab ID="Details" runat="server" Text="Details" />
+                    <telerik:RadTab ID="Settings" runat="server" Text="Settings" />
+                </tabs>
+            </telerik:RadTabStrip>
+            <table>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="PageHeaderContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="PageContentPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
