@@ -1,0 +1,142 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Convergence.ExternalFileUploader", "Convergence.ExternalFileUploader\Convergence.ExternalFileUploader.csproj", "{37574422-C038-4091-805B-173B04920BA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEngine", "AppEngine\AppEngine.csproj", "{34CF129C-5A04-47B1-88CA-408C3F9E46E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEngine.Infrastructure", "AppEngine.Infrastructure\AppEngine.Infrastructure.csproj", "{6B3229E3-3299-4F1F-A328-108F16D623E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEngine.Common", "AppEngine.Common\AppEngine.Common.csproj", "{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEngine.Domain", "AppEngine.Domain\AppEngine.Domain.csproj", "{CA8A1ECD-ED97-4246-A433-025A36707BF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppEngine.DTO", "AppEngine.DTO\AppEngine.DTO.csproj", "{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+		wfTest|Any CPU = wfTest|Any CPU
+		wfTest|x86 = wfTest|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37574422-C038-4091-805B-173B04920BA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Debug|x86.Build.0 = Debug|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Release|x86.ActiveCfg = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.Release|x86.Build.0 = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.wfTest|Any CPU.ActiveCfg = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.wfTest|Any CPU.Build.0 = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.wfTest|x86.ActiveCfg = Release|Any CPU
+		{37574422-C038-4091-805B-173B04920BA1}.wfTest|x86.Build.0 = Release|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Debug|x86.ActiveCfg = Debug|x86
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Debug|x86.Build.0 = Debug|x86
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Release|x86.ActiveCfg = Release|x86
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.Release|x86.Build.0 = Release|x86
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.wfTest|Any CPU.ActiveCfg = wfTest|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.wfTest|Any CPU.Build.0 = wfTest|Any CPU
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.wfTest|x86.ActiveCfg = wfTest|x86
+		{34CF129C-5A04-47B1-88CA-408C3F9E46E4}.wfTest|x86.Build.0 = wfTest|x86
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Debug|x86.Build.0 = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Release|x86.ActiveCfg = Release|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.Release|x86.Build.0 = Release|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.wfTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.wfTest|Any CPU.Build.0 = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.wfTest|x86.ActiveCfg = Debug|Any CPU
+		{6B3229E3-3299-4F1F-A328-108F16D623E7}.wfTest|x86.Build.0 = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Debug|x86.Build.0 = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Release|x86.ActiveCfg = Release|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.Release|x86.Build.0 = Release|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.wfTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.wfTest|Any CPU.Build.0 = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.wfTest|x86.ActiveCfg = Debug|Any CPU
+		{BCFBDEA6-50A9-477F-A3AB-EB4BB3E3E3CB}.wfTest|x86.Build.0 = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Debug|x86.Build.0 = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Release|x86.ActiveCfg = Release|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.Release|x86.Build.0 = Release|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.wfTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.wfTest|Any CPU.Build.0 = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.wfTest|x86.ActiveCfg = Debug|Any CPU
+		{CA8A1ECD-ED97-4246-A433-025A36707BF8}.wfTest|x86.Build.0 = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Debug|x86.Build.0 = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Release|x86.ActiveCfg = Release|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.Release|x86.Build.0 = Release|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.wfTest|Any CPU.ActiveCfg = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.wfTest|Any CPU.Build.0 = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.wfTest|x86.ActiveCfg = Debug|Any CPU
+		{78E36411-D5D4-49E9-908F-5FF2E3BFBFC1}.wfTest|x86.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E3B190B-F452-45AF-B647-B5A568CCC083}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://coviusdev.visualstudio.com/
+		SccProjectUniqueName0 = Convergence.ExternalFileUploader\\Convergence.ExternalFileUploader.csproj
+		SccProjectName0 = Convergence.ExternalFileUploader
+		SccAuxPath0 = https://coviusdev.visualstudio.com
+		SccLocalPath0 = Convergence.ExternalFileUploader
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = AppEngine\\AppEngine.csproj
+		SccProjectName1 = AppEngine
+		SccAuxPath1 = https://coviusdev.visualstudio.com
+		SccLocalPath1 = AppEngine
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = AppEngine.Infrastructure\\AppEngine.Infrastructure.csproj
+		SccProjectName2 = AppEngine.Infrastructure
+		SccAuxPath2 = https://coviusdev.visualstudio.com
+		SccLocalPath2 = AppEngine.Infrastructure
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = AppEngine.Common\\AppEngine.Common.csproj
+		SccProjectName3 = AppEngine.Common
+		SccAuxPath3 = https://coviusdev.visualstudio.com
+		SccLocalPath3 = AppEngine.Common
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = AppEngine.Domain\\AppEngine.Domain.csproj
+		SccProjectName4 = AppEngine.Domain
+		SccAuxPath4 = https://coviusdev.visualstudio.com
+		SccLocalPath4 = AppEngine.Domain
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = AppEngine.DTO\\AppEngine.DTO.csproj
+		SccProjectName5 = AppEngine.DTO
+		SccAuxPath5 = https://coviusdev.visualstudio.com
+		SccLocalPath5 = AppEngine.DTO
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

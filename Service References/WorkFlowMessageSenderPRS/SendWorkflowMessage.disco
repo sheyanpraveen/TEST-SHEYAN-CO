@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://gresweb01/PRSV21/Services/SendWorkflowMessage.asmx?wsdl" docRef="http://gresweb01/PRSV21/Services/SendWorkflowMessage.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://gresweb01/PRSV21/Services/SendWorkflowMessage.asmx" xmlns:q1="http://rrd.com/PRS/TimerService" binding="q1:SendWorkflowMessageSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://gresweb01/PRSV21/Services/SendWorkflowMessage.asmx" xmlns:q2="http://rrd.com/PRS/TimerService" binding="q2:SendWorkflowMessageSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>
